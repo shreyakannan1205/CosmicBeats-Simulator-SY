@@ -3,7 +3,8 @@
 // Licensed under the MIT license.
 
 This is a quick script to generate the configuration file for the IoT application
-Usage: python3 create_config.py tle_file gs_file start_time end_time delta output_file 
+Usage: python3 create_config.py tle_file gs_file start_time end_time delta output_file
+python3 create_config.py imaging.tle gs_sk.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00' '1' output_file_100_random.json
 I assume a 3LE file. 
 I assume a GS file with lat, long. 
 I assume start_time and end_time are YYYY-MM-DD HH:MM:SS
@@ -50,73 +51,7 @@ def get_satellite_string(node_id, tle_line_1, tle_line_2):
                         },
                         {
                             "iname": "ModelFovTimeBased",
-                            "min_elevation": 5
-                        },
-                        {
-                            "iname": "ModelADACS"
-                        },
-                        {
-                            "iname": "ModelCompute",
-                            "compute_time": 39,
-                            "queue_size": -1
-                        },
-                        {
-                            "iname": "ModelImagingLogicBased",
-                            "time_to_image": 0.8702,
-                            "image_size": 2764800,
-                            "imaging_interval": 0,
-                            "self_ctrl": true
-                        },
-                        {
-                            "iname": "ModelEdgeCompute"
-                        },
-                        {
-                            "iname": "ModelImagingRadio",
-                            "self_ctrl": true,
-                            "radio_physetup":{
-                                "_frequency": 8.09e9,
-                                "_bandwidth": 96e6,
-                                "_tx_power": 8.2,
-                                "_tx_antenna_gain": 15,
-                                "_tx_line_loss": 2,
-                                "_rx_antenna_gain": 49,
-                                "_rx_line_loss": 1.8,
-                                "_gain_to_temperature": 29,
-                                "_symbol_rate": 76.8e6,
-                                "_num_channels": 6
-                            }
-                        },
-                        {
-                            "iname": "ModelPower",
-                            "power_consumption": {
-                                "ADACS": 1.13,
-                                "IMAGING": 7,
-                                "TXRADIO": 50,
-                                "COMPUTE": 7.2,
-                                "JETSON_SLEEP": 0.3,
-                                "ISL": 8
-                            },
-                            "power_configurations": {
-                                "MAX_CAPACITY": 123.517,
-                                "MIN_CAPACITY": 0,
-                                "INITIAL_CAPACITY": 123.517 
-                            },
-                            "power_generations":{
-                                "SOLAR": 7.0528986
-                            },
-                            "always_on": ["JETSON_SLEEP"],
-                            "required_energy": {
-                                "ADACS": 23.8954,
-                                "IMAGING": 23.8954,
-                                "RXRADIO": 36.4827,
-                                "TXRADIO": 36.4827,
-                                "COMPUTE": 36.4827
-                            },
-                            "efficiency": 1
-                        },
-                        {
-                            "iname": "ModelDataStore",
-                            "queue_size": 20000
+                            "min_elevation": 25
                         }
                     ]
                 }""" % (node_id, tle_line_1, tle_line_2)
@@ -137,25 +72,7 @@ def get_groundstation_string(node_id, gs_lat, gs_lon):
                     "models":[
                         {
                             "iname": "ModelFovTimeBased",
-                            "min_elevation": 0
-                        },
-                        {
-                            "iname": "ModelImagingRadio",
-                            "self_ctrl": false,
-                            "radio_physetup":{                                
-                                "_frequency": 8.09e9,
-                                "_bandwidth": 96e6,
-                                "_tx_power": 8.2,
-                                "_tx_antenna_gain": 15,
-                                "_tx_line_loss": 2,
-                                "_rx_antenna_gain": 49,
-                                "_rx_line_loss": 1.8,
-                                "_gain_to_temperature": 29
-                            }
-                        },
-                        {
-                            "iname": "ModelDataStore",
-                            "queue_size": 1
+                            "min_elevation": 25
                         }
                     ]
                 }""" % (node_id, gs_lat, gs_lon)

@@ -164,6 +164,7 @@ class ModelFovTimeBased(IModel):
         
         _loggerStr = "".join(["Pass. nodeID: ", str(_otherNode.nodeID), ". nodeType: ", _otherNodeType, ". startTimeUnix: ", str(_startTimeUnix), ". endTimeUnix: ", str(_endTimeUnix)])
         self.__logger.write_Log(_loggerStr, ELogType.LOGINFO, self.__ownernode.timestamp, self.iName)
+        print(_loggerStr)
             
     def __find_Passes(self, **_kwargs):
         """
@@ -198,7 +199,8 @@ class ModelFovTimeBased(IModel):
         #That has less of an impact than locking the whole thing
         _currentOnes = ModelFovTimeBased.__nodeToNode[self.__ownernode.nodeID]
         _nodesToCheck = [_node for _node in _targetNodes if _node.nodeID not in _currentOnes]
-        
+        # print(_nodesToCheck)
+
         #let's find the passes
         for _node in _nodesToCheck:
                 #Same as above
@@ -217,6 +219,7 @@ class ModelFovTimeBased(IModel):
                 _minElevation = max(self.__minElevation, _otherModel.__minElevation if (_otherModel := _node.has_ModelWithName(self.iName)) else 0)
                 _startTime = max(self.__ownernode.simStartTime, self.__ownernode.timestamp)
                 _passes = _orbitModel.call_APIs("get_Passes", _gs = _groundStationNode, _start = _startTime, _end = self.__ownernode.simEndTime, _minElevation=_minElevation)
+                # print(_passes)
 
                 for _pass in _passes:
                     self.__log_Pass(_node, _pass[0], _pass[1])

@@ -313,7 +313,7 @@ class ModelOrbit(IModel):
         @return
             utils.Location object containing the position of the satellite
         """
-        _time = kwargs['_time']
+        _time = kwargs.get("_time",self.__ownernode.timestamp)
         if not isinstance(_time, Time):
             raise Exception("[In ModelOrbit] Time is not set/valid")
         
@@ -441,7 +441,7 @@ class ModelOrbit(IModel):
         self.__skyfieldts = None
         self.__setup_Skyfield()
         
-        self.__ephem = load("./dependencies/de440s.bsp") #ephemeris file. This is a binary file that contains the positions of the earth and the sun. 
+        # self.__ephem = load("./dependencies/de440s.bsp") #ephemeris file. This is a binary file that contains the positions of the earth and the sun.
         #NASA JPL Horizons Ephemeris Service: https://ssd.jpl.nasa.gov/ephem.html provides the ephemeris file 
         
         self.__alwaysCalculate = _alwaysCalculate

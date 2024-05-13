@@ -29,78 +29,7 @@ def get_satellite_string(node_id, tle_line_1, tle_line_2):
                         },
                         {
                             "iname": "ModelFovTimeBased",
-                            "min_elevation": 0
-                        },
-                        {
-                            "iname": "ModelDownlinkRadio",
-                            "self_ctrl": false,
-                            "radio_physetup":{
-                                "_frequency": 0.138e9,
-                                "_bandwidth": 30e3,
-                                "_sf": 11,
-                                "_coding_rate": 5,
-                                "_preamble": 8,
-                                "_tx_power": 1.76,
-                                "_tx_antenna_gain": 2.18,
-                                "_tx_line_loss": 1,
-                                "_rx_antenna_gain": -2.18,
-                                "_rx_line_loss": 1,
-                                "_gain_to_temperature": -30.1,
-                                "_bits_allowed": 2
-                            }
-                        },
-                        {
-                            "iname": "ModelAggregatorRadio",
-                            "self_ctrl": false,
-                            "radio_physetup":{
-                                "_frequency": 0.149e9,
-                                "_bandwidth": 30e3,
-                                "_sf": 11,
-                                "_coding_rate": 5,
-                                "_preamble": 8,
-                                "_tx_power": 1.76,
-                                "_tx_antenna_gain": 2.18,
-                                "_tx_line_loss": 1,
-                                "_rx_antenna_gain": -2.18,
-                                "_rx_line_loss": 1,
-                                "_gain_to_temperature": -30.1,
-                                "_bits_allowed": 2
-                            }
-                        },
-                        {
-                            "iname": "ModelPower",
-                            "power_consumption": {
-                                "TXRADIO": 0.532,
-                                "HEATER": 0.532,
-                                "RXRADIO": 0.133,
-                                "CONCENTRATOR": 0.266,
-                                "GPS": 0.190
-                            },
-                            "power_configurations": {
-                                "MAX_CAPACITY": 25308,
-                                "MIN_CAPACITY": 15185,
-                                "INITIAL_CAPACITY": 25308 
-                            },
-                            "power_generations":{
-                                "SOLAR": 1.666667
-                            },
-                            "always_on": ["GPS", "CONCENTRATOR", "RXRADIO", "HEATER"],
-                            "efficiency": 0.85,
-                            "delta": 1
-                        },
-                        {
-                            "iname": "ModelDataStore",
-                            "self_ctrl": false
-                        },
-                        {
-                            "iname": "ModelMACTTnC",
-                            "beacon_interval":  60,
-                            "beacon_backoff": 30,
-                            "beacon_frequency": 0.128e9,
-                            "downlink_frequency": 0.138e9
-                        },
-                        {
-                            "iname": "ModelMACgateway"
+                            "min_elevation": 25
                         }
                     ]
                     
@@ -123,35 +52,6 @@ def get_groundstation_string(node_id, gs_lat, gs_lon):
                         {
                             "iname": "ModelFovTimeBased",
                             "min_elevation": 0
-                        },
-                        {
-                            "iname": "ModelLoraRadio",
-                            "self_ctrl": false,
-                            "radio_physetup":{                                
-                                "_frequency": 0.138e9,
-                                "_bandwidth": 30e3,
-                                "_sf": 11,
-                                "_coding_rate": 5,
-                                "_preamble": 8,
-                                "_tx_power": 1.76,
-                                "_tx_antenna_gain": 2.84,
-                                "_tx_line_loss": 1,
-                                "_rx_antenna_gain": -3.49,
-                                "_rx_line_loss": 1,
-                                "_gain_to_temperature": -30.1,
-                                "_bits_allowed": 2
-                            }
-                        },
-                        {
-                            "iname": "ModelMACgs",
-                            "num_packets": 10,
-                            "timeout": 120,
-                            "beacon_frequency": 0.128e9,
-                            "downlink_frequency": 0.138e9
-                        },
-                        {
-                            "iname": "ModelDataStore",
-                            "queue_size": 1
                         }
                     ]
                 }""" % (node_id, gs_lat, gs_lon)

@@ -610,4 +610,4 @@
 (63.2661, -159.2499, 584247.2813) 2024-04-09 12:09:57
 (63.2254, -159.1496, 584238.6387) 2024-04-09 12:09:58
 (63.1846, -159.0496, 584229.9712) 2024-04-09 12:09:59
-[Simulator Info] Time required to run the simulation: 3.1071622079980443 seconds.
+[Simulator Info] Time required to run the simulation: 2.619721375000154 seconds.

@@ -6,7 +6,7 @@ folder_name = "NumSat"
 os.makedirs(folder_name, exist_ok=True)
 
 # List of numbers to replace in the commands
-numbers = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 3000]  # 5707
+numbers = [10] # [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 3000]  # 5707
 
 for num in numbers:
     # File paths are now prefixed with the folder name

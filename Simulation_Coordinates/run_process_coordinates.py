@@ -1,7 +1,7 @@
 import subprocess
 
 def run_commands():
-    command1 = "python3 create_config.py imaging_1.tle gs.txt '2024-04-09 12:00:00' '2024-04-09 12:10:00' '1' output_file_coordinates.json"
+    command1 = "python3 create_config.py imaging.tle gs.txt '2024-04-09 12:00:00' '2024-04-09 12:10:00' '1' output_file_coordinates.json"
     command2 = "python3 imagesatellite.py output_file_coordinates.json > output_coordinates.txt"
 
     try:

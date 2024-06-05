@@ -21,4 +21,4 @@ if len(sys.argv) == 3:
     target_file = sys.argv[2]
     append_gap_duration(source_file, target_file)
 else:
-    print("Usage: python script_name.py source_file target_file")
+    print("Usage: python gap_duration_analysis.py source_file target_file")

@@ -59,7 +59,7 @@ def main():
     ax.bar(labels, results, yerr=errors, capsize=5, color=colors)
     ax.set_ylabel('Average Difference in Seconds')
     ax.set_title('Average Time Difference From Original Gaps')
-    plt.savefig('plot_gap_duration_difference_std.png')
+    plt.savefig('plot_gap_duration_difference.png')
 
 if __name__ == "__main__":
     main()

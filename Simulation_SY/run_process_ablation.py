@@ -31,6 +31,7 @@ def process_source_file(source_file, base_name):
 
 def main():
     source_files = [
+        # ("starlink_ablation_source.tle", "original")
         ("starlink_ablation_diffheight.tle", "diffheight"),
         ("starlink_ablation_diffinclination_43.tle", "diffinclination"),
         ("starlink_ablation_diffphase.tle", "diffphase")

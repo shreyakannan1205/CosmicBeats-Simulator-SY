@@ -81,5 +81,5 @@ ax2.legend(loc='upper left')
 ax3.legend(loc='upper right')
 plt.subplots_adjust(top=0.95)  # Adjust the top margin; increase the value if the title is cut off
 plt.title('Satellite Communication Gap Analysis - 24h period')
-plt.savefig('plot_gap_analysis.png')  # Save the plot as a PNG file
+plt.savefig('plot_gap_analysis_numsat.png')  # Save the plot as a PNG file
 # plt.show()

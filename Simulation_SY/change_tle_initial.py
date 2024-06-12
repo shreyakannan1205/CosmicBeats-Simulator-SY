@@ -22,7 +22,7 @@ def extract_and_save_remaining_segments(input_file_path, extracted_output_path, 
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: python script_name.py input_file_path extracted_output_path remaining_output_path number_of_segments_to_extract")
+        print("Usage: python3 change_tle_initial.py input_file_path extracted_output_path remaining_output_path number_of_segments_to_extract")
         sys.exit(1)
 
     input_file_path = sys.argv[1]

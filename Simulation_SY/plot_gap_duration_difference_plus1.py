@@ -32,34 +32,51 @@ def analyze_file(filename):
 
     return durations
 
+def format_seconds(seconds):
+    minutes = int(seconds // 60)
+    seconds = int(seconds % 60)
+    return f"{minutes:02}:{seconds:02}"
+
 def main():
     files_info = [
-        ('gap_duration_analysis_plus1_1.txt', "one plus one"),
-        ('gap_duration_analysis_plus1_100.txt', "hundred plus one"),
-        ('gap_duration_analysis_plus1_500.txt', "fivehundred plus one")
+        ('gap_duration_analysis_plus1_1.txt', "1 plus one"),
+        ('gap_duration_analysis_plus1_100.txt', "100 plus one"),
+        ('gap_duration_analysis_plus1_500.txt', "500 plus one")
     ]
     results = []
     errors = []
+    min_max_values = []
     colors = ['blue', 'green', 'red']  # List of colors for each bar
 
     for filename, label in files_info:
         durations = analyze_file(filename)
         if durations:
             average_difference = np.mean(durations)
-            std_deviation = np.std(durations)
+            min_difference = np.min(durations)
+            max_difference = np.max(durations)
             results.append(average_difference)
-            errors.append(std_deviation)
+            errors.append([average_difference - min_difference, max_difference - average_difference])
+            min_max_values.append((min_difference, max_difference))
         else:
             results.append(0)  # Assuming zero difference if no durations found
-            errors.append(0)
+            errors.append([0, 0])
+            min_max_values.append((0, 0))
 
     # Plotting the results with error bars
     fig, ax = plt.subplots()
     labels = [label for _, label in files_info]
-    ax.bar(labels, results, yerr=errors, capsize=5, color=colors)
+    ax.bar(labels, results, yerr=np.array(errors).T, capsize=5, color=colors)
     ax.set_ylabel('Average Difference in Seconds')
-    ax.set_title('Average Time Difference From Original Gaps')
-    plt.savefig('plot_gap_duration_difference.png')
+    # ax.set_title('Average Time Difference From Original Gaps')
+
+    # Annotating the min and max values on the bars
+    for i, (min_val, max_val) in enumerate(min_max_values):
+        bar = ax.patches[i]
+        bar_height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width() / 2, bar_height + errors[i][1], f"Max: {format_seconds(max_val)}", ha='center', va='bottom')
+        ax.text(bar.get_x() + bar.get_width() / 2, bar_height - errors[i][0], f"Min: {format_seconds(min_val)}", ha='center', va='top')
+
+    plt.savefig('plot_gap_duration_difference_plus1_min_max.png')
 
 if __name__ == "__main__":
     main()

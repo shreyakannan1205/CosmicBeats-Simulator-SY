@@ -1,0 +1,37 @@
+1. Ratio Fixed to 10:1, 11 parties 
+1000 100 100 100 100 100 100 100 100 100 100 (largest party: 1000 / total: 2000)
+
+500 50 50 50 50 50 50 50 50 50 50 (largest party: 500 / total: 1000)
+
+250 25 25 25 25 25 25 25 25 25 25 (largest party: 250 / total: 500)
+
+100 10 10 10 10 10 10 10 10 10 10 (largest party: 100 / total: 200) 
+
+10 1 1 1 1 1 1 1 1 1 1 (largest party: 10 / total 20) 
+
+2. Number of Sats fixed to 1000, 11 parties 
+
+91 91 91 91 91 91 91 91 91 91 90 (1:1...:1)
+
+167 84 84 84 83 83 83 83 83 83 83 (2:1:1...:1)
+
+230 77 77 77 77 77 77 77 77 77 77 (3:1:1...:1)
+
+286 72 72 72 72 71 71 71 71 71 71 (4:1:1...:1)
+
+334 67 67 67 67 67 67 66 66 66 66 (5:1:1...:1)
+
+375 63 63 63 63 63 62 62 62 62 62 (6:1:1...:1)
+
+412 59 59 59 59 59 59 59 59 58 58 (7:1:1...:1)
+
+444 56 56 56 56 56 56 55 55 55 55 (8:1:1...:1)
+
+474 53 53 53 53 53 53 52 52 52 52 (9:1:1...:1)
+
+500 50 50 50 50 50 50 50 50 50 50 (10:1:...:1)  
+
+
+1. pick 2000 random sats (keep it fixed - original_totalsize_2000.tle) get the gap duration. then forloop erase random 1000 -> get gap duration, repeat 100 times. /// pick random 1000 sats, erase 500. /// pick random 200 sats. erase 100. pick random 20 sats, erase 10. 
+
+2. pick 1000 random sats (keep it fixed -original_ratio_1000.tle) get the gap duration. for loop erase random 91, 167, 230 ... 500) for each 100 times. 

@@ -9,7 +9,6 @@ os.makedirs(folder_name, exist_ok=True)
 numbers = [10] # [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 3000]  # 5707
 
 for num in numbers:
-    # File paths are now prefixed with the folder name
     input_tle = os.path.join(folder_name, "imaging_num.tle")
     output_json = os.path.join(folder_name, f"output_file_{num}_random.json")
     output_txt = os.path.join(folder_name, f"output_{num}_random.txt")

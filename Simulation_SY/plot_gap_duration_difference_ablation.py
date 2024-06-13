@@ -3,6 +3,7 @@ from datetime import timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import plot_config
 
 def parse_duration(duration_str):
     h, m, s = map(float, duration_str.split(':'))
@@ -22,9 +23,9 @@ def get_original_duration():
 
 def analyze_file(filename, original_duration):
     durations = []
-    folder_path = "Ablation"  # Define the folder where files are stored
+    folder_path = "Ablation"  
 
-    full_path = os.path.join(folder_path, filename)  # Generate the full path to the file
+    full_path = os.path.join(folder_path, filename)  
     with open(full_path, 'r') as file:
         for line in file:
             match = re.search(r'Total gap duration: (\d+:\d+:\d+\.\d+)', line)
@@ -47,14 +48,15 @@ def main():
         return
 
     files_info = [
-        ('gap_duration_analysis_plus1_diffheight.txt', "Different Height Sat"),
-        ('gap_duration_analysis_plus1_diffinclination.txt', "Different Inclination Sat"),
-        ('gap_duration_analysis_plus1_diffphase.txt', "Different Phase Sat")
+        ('gap_duration_analysis_plus1_diffheight.txt', "Different Height"),
+        ('gap_duration_analysis_plus1_diffinclination.txt', "Different Inclination"),
+        ('gap_duration_analysis_plus1_diffphase.txt', "Different Phase")
     ]
     results = []
     errors = []
     avg_labels = []
-    colors = ['blue', 'green', 'red']  # List of colors for each bar
+    colors = plot_config.experiment_colors[:len(files_info)]
+    hatches = plot_config.hatches[:len(files_info)]
 
     for filename, label in files_info:
         durations = analyze_file(filename, original_duration)
@@ -65,23 +67,23 @@ def main():
             errors.append(std_deviation)
             avg_labels.append(format_seconds(average_difference))
         else:
-            results.append(0)  # Assuming zero difference if no durations found
+            results.append(0)  
             errors.append(0)
             avg_labels.append("00:00")
 
-    # Plotting the results with error bars
     fig, ax = plt.subplots()
     labels = [label for _, label in files_info]
-    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors)
+    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
+    ax.set_xlabel('Type of Satellite Added')
     ax.set_ylabel('Average Difference in Seconds')
-    ax.set_title('Average Time Difference From Original Gaps')
+    # ax.set_title('Average Time Difference From Original Gaps')
 
-    # Adding the average value on top of each bar
     for bar, label in zip(bars, avg_labels):
         height = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width() / 2, height, label, ha='center', va='bottom')
+        ax.text(bar.get_x() + bar.get_width() * 0.75, height, label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
 
-    plt.savefig('plot_gap_duration_difference_ablation.png')
+
+    plt.savefig('plot_gap_duration_difference_ablation.png', dpi=300)
 
 if __name__ == "__main__":
     main()

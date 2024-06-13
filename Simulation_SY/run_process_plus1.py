@@ -9,23 +9,21 @@ def run_script(command):
         print(f"An error occurred: {e}")
 
 def main():
-    # Create or check the 'PlusOne' directory
     directory = "PlusOne"
     os.makedirs(directory, exist_ok=True)
 
-    # Ask user for the numbers list
     try:
         numbers = list(map(int, input("Enter the numbers separated by space (First try was 1 100 500): ").split()))
     except ValueError:
         print("Invalid input. Please enter valid integers separated by spaces.")
-        return  # Exit if input is not valid integers
+        return  
 
     # Ask for the number of repetitions at the start to be used for all numbers
     try:
         repetitions = int(input("Enter the number of repetitions for all numbers: "))
     except ValueError:
         print("Invalid input. Please enter a valid integer for the number of repetitions.")
-        return  # Exit if the repetition input is not valid
+        return  
 
     for number in numbers:
         # Initial script to process with different numbers, adjusted to use the 'PlusOne' directory

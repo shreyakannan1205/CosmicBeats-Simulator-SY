@@ -3,6 +3,7 @@ from datetime import timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import plot_config
 
 def parse_duration(duration_str):
     h, m, s = map(float, duration_str.split(':'))
@@ -28,11 +29,9 @@ def analyze_file(file_path, original_duration):
     return durations
 
 def format_seconds(seconds):
-    hours = int(seconds // 3600)
-    remaining_seconds = int(seconds % 3600)
-    minutes = int(remaining_seconds // 60)
-    remaining_seconds = int(remaining_seconds % 60)
-    return f"{hours:02}:{minutes:02}:{remaining_seconds:02}"
+    minutes = int(seconds // 60)
+    remaining_seconds = int(seconds % 60)
+    return f"{minutes:02}:{remaining_seconds:02}"
 
 def main():
     directory = "Resilience"
@@ -44,8 +43,10 @@ def main():
     results = []
     errors = []
     avg_labels = []
-    colors = ['blue', 'green', 'red', 'purple', 'gray', 'orange', 'pink', 'cyan', 'brown', 'yellow']  # List of colors for each bar
-    
+    num_labels = len(labels)  # Number of labels
+    colors = plot_config.experiment_colors[:num_labels]
+    hatches = plot_config.hatches[:num_labels]
+
     original_file_path = os.path.join(directory, original_file)
     original_duration = get_original_duration(original_file_path)
     if not original_duration:
@@ -63,23 +64,23 @@ def main():
             errors.append(std_deviation)
             avg_labels.append(format_seconds(average_difference))
         else:
-            results.append(0)  # Assuming zero difference if no durations found
+            results.append(0)  
             errors.append(0)
-            avg_labels.append("00:00:00")
+            avg_labels.append("00:00")
 
-    # Setting larger font sizes
-    plt.rcParams.update({'font.size': 14, 'axes.titlesize': 18, 'axes.labelsize': 16, 'xtick.labelsize': 14, 'ytick.labelsize': 14})
+    new_labels = [f"{label.split('_')[0]}:1..:1" for label in labels]
 
     # Plotting the results with error bars
     fig, ax = plt.subplots(figsize=(12, 8))  # Increase the figure size to 12x8 inches
-    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors)
+    bars = ax.bar(new_labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
     ax.set_ylabel('Avg. Difference (Seconds)')
-    ax.set_title('Avg. Time Difference from Original Gaps')
+    ax.set_xlabel('Ratio Between Different Parties (Total: 1000 Satellites)')
+    # ax.set_title('Avg. Time Difference from Original Gaps')
 
-    # Adding the average value on top of each bar
+    # Adding the average value on top of each bar in MM:SS format
     for bar, label in zip(bars, avg_labels):
         height = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width() / 2, height, label, ha='center', va='bottom', fontsize=12)
+        ax.text(bar.get_x() + bar.get_width() * 0.85, height, label, ha='center', va='bottom', fontsize=12)
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout() 

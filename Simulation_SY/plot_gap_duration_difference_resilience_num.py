@@ -3,6 +3,7 @@ from datetime import timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import plot_config
 
 def parse_duration(duration_str):
     h, m, s = map(float, duration_str.split(':'))
@@ -55,8 +56,9 @@ def main():
     results = []
     errors = []
     avg_labels = []
-    colors = ['blue', 'green', 'red', 'purple', 'gray']  # List of colors for each bar
-    
+    colors = plot_config.experiment_colors[:len(original_files)]
+    hatches = plot_config.hatches[:len(original_files)]
+
     for original_file, analyzed_file in zip(original_files, analyzed_files):
         original_file_path = os.path.join(directory, original_file)
         analyzed_file_path = os.path.join(directory, analyzed_file)
@@ -74,28 +76,24 @@ def main():
             errors.append(std_deviation)
             avg_labels.append(format_seconds(average_difference))
         else:
-            results.append(0)  # Assuming zero difference if no durations found
+            results.append(0)  
             errors.append(0)
             avg_labels.append("00:00:00")
 
-    # Setting larger font sizes
-    plt.rcParams.update({'font.size': 14, 'axes.titlesize': 18, 'axes.labelsize': 16, 'xtick.labelsize': 14, 'ytick.labelsize': 14})
-
-    # Plotting the results with error bars
-    fig, ax = plt.subplots(figsize=(12, 8))  # Increase the figure size to 12x8 inches
-    labels = [f"{base_name} Sats, {int(int(base_name)/2)} Denied" for base_name in ['20', '200', '500', '1000', '2000']]
-    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors)
+    fig, ax = plt.subplots() 
+    labels = [f"{base_name}" for base_name in ['20', '200', '500', '1000', '2000']]
+    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
+    ax.set_xlabel('Total Number of Satellites')
     ax.set_ylabel('Avg. Difference (Seconds)')
-    ax.set_title('Avg. Time Difference from Original Gaps')
+    # ax.set_title('Avg. Time Difference from Original Gaps')
 
-    # Adding the average value on top of each bar
     for bar, label in zip(bars, avg_labels):
         height = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width() / 2, height, label, ha='center', va='bottom', fontsize=12)
+        ax.text(bar.get_x() + bar.get_width() * 0.85, height, label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
 
-    plt.xticks(rotation=45, ha='right')
-    plt.tight_layout()  # Adjust the layout to make room for the rotated labels
-    plt.savefig('plot_gap_duration_difference_resilience_num.png', dpi=300)  # Save the figure with higher resolution
+    plt.xticks()
+    plt.tight_layout() 
+    plt.savefig('plot_gap_duration_difference_resilience_num.png', dpi=300)  
     # plt.show()
 
 if __name__ == "__main__":

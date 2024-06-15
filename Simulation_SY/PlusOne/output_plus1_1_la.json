@@ -1,0 +1,89 @@
+
+{
+    "topologies":
+    [
+        {
+            "name": "ImagingSatConstellation",
+            "id": 0,
+            "nodes":
+            [
+    
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 1,
+                    "loglevel": "info",
+                    "tle_1": "1 59028U 24038F   24101.10494142  .00206868  00000+0  14154-2 0  9990", 
+                    "tle_2": "2 59028  43.0007 352.5994 0003429 289.3666  70.6831 15.73369359  8166",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 3,
+                    "loglevel": "info",
+                    "tle_1": "1 59335U 24057R   24101.58335648 -.00042077  00000+0 -28678-3 0  9998", 
+                    "tle_2": "2 59335  43.0005 220.6977 0001667 258.8374  73.8172 15.73840273  3651",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 4,
+                    "loglevel": "info",
+                    "latitude": 34.052200,
+                    "longitude": -118.243700,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                }
+                ]
+            }
+        ],
+        "simtime":
+        {
+            "starttime": "2024-04-09 12:00:00",
+            "endtime": "2024-04-16 12:00:00",
+            "delta": 1
+        },
+        "simlogsetup":
+        {
+            "loghandler": "LoggerFileChunkwise",
+            "logfolder": "imagingLogs",
+            "logchunksize": 1000000
+        }
+}
+    

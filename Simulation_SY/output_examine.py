@@ -13,13 +13,15 @@ def convert_readable_to_unix(date_str):
     utc_datetime = naive_datetime.replace(tzinfo=pytz.utc)
     return utc_datetime.timestamp()
 
-
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script_name.py input_file_path")
+    if len(sys.argv) != 4:
+        print("Usage: python script_name.py input_file_path initial_time_str final_time_str")
         sys.exit(1)
 
     input_file_path = sys.argv[1]
+    initial_time_str = sys.argv[2]
+    final_time_str = sys.argv[3]
+    
     base_file_name = input_file_path.rsplit('.', 1)[0]  # Removes the file extension
 
     # Regular expression to match the timestamps accurately
@@ -45,9 +47,7 @@ if __name__ == "__main__":
     largest_gap = timedelta(seconds=0)
     largest_gap_details = None
 
-    # Define the initial and final times for gap checks
-    initial_time_str = '2024-04-09 12:00:00'
-    final_time_str = '2024-04-10 12:00:00'
+    # Convert initial and final times to Unix
     initial_time_unix = convert_readable_to_unix(initial_time_str)
     final_time_unix = convert_readable_to_unix(final_time_str)
 

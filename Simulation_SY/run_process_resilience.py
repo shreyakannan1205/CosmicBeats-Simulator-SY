@@ -16,7 +16,7 @@ def process_source_file(source_file, base_name, repetitions):
     print(f"Running initial analysis on {source_file} with {base_name}.")
     run_script(f"python3 create_config.py {source_file} gs.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00' '1' {directory}/output_initial_{base_name}.json")
     run_script(f"python3 imagesatellite.py {directory}/output_initial_{base_name}.json > {directory}/output_initial_{base_name}.txt")
-    run_script(f"python3 output_examine.py {directory}/output_initial_{base_name}.txt")
+    run_script(f"python3 output_examine.py {directory}/output_initial_{base_name}.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00'")
     run_script(f"python3 gap_duration_analysis.py {directory}/output_initial_{base_name}_gaps_report.txt {directory}/gap_duration_analysis_initial_{base_name}.txt")
 
     # Start the repetitions
@@ -25,7 +25,7 @@ def process_source_file(source_file, base_name, repetitions):
         run_script(f"python3 change_tle_resilience.py {source_file} {directory}/imaging_{base_name}.tle {int(base_name) // 2}")
         run_script(f"python3 create_config.py {directory}/imaging_{base_name}.tle gs.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00' '1' {directory}/output_resilience_{base_name}.json")
         run_script(f"python3 imagesatellite.py {directory}/output_resilience_{base_name}.json > {directory}/output_resilience_{base_name}.txt")
-        run_script(f"python3 output_examine.py {directory}/output_resilience_{base_name}.txt")
+        run_script(f"python3 output_examine.py {directory}/output_resilience_{base_name}.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00'")
         run_script(f"python3 gap_duration_analysis.py {directory}/output_resilience_{base_name}_gaps_report.txt {directory}/gap_duration_analysis_resilience_{base_name}.txt")
 
         print(f"Cycle {i + 1} completed with {base_name}.")

@@ -16,7 +16,7 @@ for num in numbers:
     command1 = f"python3 change_tle.py starlink_original.tle {input_tle} {num}"
     command2 = f"python3 create_config.py {input_tle} gs.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00' '1' {output_json}"
     command3 = f"python3 imagesatellite.py {output_json} > {output_txt}"
-    command4 = f"python3 output_examine.py {output_txt}"
+    command4 = f"python3 output_examine.py {output_txt} '2024-04-09 12:00:00' '2024-04-10 12:00:00'"
 
     try:
         print(f"Running commands for number: {num}")

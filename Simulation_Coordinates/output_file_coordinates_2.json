@@ -2125,9 +2125,32 @@
                 },
 
                 {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 185,
+                    "loglevel": "info",
+                    "tle_1": "1 54867U 22175W   24100.52217282  .00001245  00000+0  96324-4 0  5", 
+                    "tle_2": "2 54867  53.2156 287.4860 0001364  80.1829    8.9317 15.08840119 724289",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel" 
+                        }
+                        
+                    ]
+                },
+
+                {
                     "type": "GS",
                     "iname": "GSBasic",
-                    "nodeid": 184,
+                    "nodeid": 186,
                     "loglevel": "info",
                     "latitude": 36.339800,
                     "longitude": 127.394000,

@@ -1,0 +1,23 @@
+[Simulator Info] Computing FOVs...
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712667401.499689. endTimeUnix: 1712667661.541087
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712673368.828859. endTimeUnix: 1712673618.60091
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712735480.12922. endTimeUnix: 1712735528.854685
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712741306.547225. endTimeUnix: 1712741583.696678
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712747306.321522. endTimeUnix: 1712747543.781791
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712664493.300738. endTimeUnix: 1712664729.457574
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712670458.952146. endTimeUnix: 1712670732.263116
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712676458.443403. endTimeUnix: 1712676633.059233
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712738446.252018. endTimeUnix: 1712738659.922756
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712744371.832027. endTimeUnix: 1712744639.153048
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712750372.152288. endTimeUnix: 1712750400.0
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712668882.360698. endTimeUnix: 1712669154.192416
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712674872.655987. endTimeUnix: 1712675096.649421
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712737010.863384. endTimeUnix: 1712737181.126914
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712742915.853845. endTimeUnix: 1712743193.375615
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712748926.606839. endTimeUnix: 1712749169.689608
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712665897.299802. endTimeUnix: 1712666146.918967
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712671867.113327. endTimeUnix: 1712672146.589743
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712739933.182516. endTimeUnix: 1712740205.104276
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712745920.531976. endTimeUnix: 1712746176.414474
+[Simulator Info] FOVs computed.
+[Simulator Info] Time required to run the simulation: 2.031870695998805 seconds.

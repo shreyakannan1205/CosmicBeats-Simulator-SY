@@ -1,9 +1,0 @@
-[Simulator Info] Computing FOVs...
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712667280.28361. endTimeUnix: 1712667418.72269
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712723099.876597. endTimeUnix: 1712723376.661094
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712747289.032579. endTimeUnix: 1712747529.299633
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712719311.619736. endTimeUnix: 1712719500.350959
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712725301.855319. endTimeUnix: 1712725575.145649
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712731417.696095. endTimeUnix: 1712731598.627643
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712737458.151925. endTimeUnix: 1712737707.759584
-Pass. nodeID: 4. nodeType: 1. startTimeUnix: 1712743496.62052. endTimeUnix: 1712743756.277289

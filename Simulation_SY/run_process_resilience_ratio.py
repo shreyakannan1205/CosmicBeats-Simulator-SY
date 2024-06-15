@@ -16,7 +16,7 @@ def process_source_file(source_file, base_name, repetitions, denied_numbers, lab
     print(f"Running initial analysis on {source_file} with {base_name}.")
     run_script(f"python3 create_config.py {source_file} gs.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00' '1' {directory}/output_initial_ratio_{base_name}.json")
     run_script(f"python3 imagesatellite.py {directory}/output_initial_ratio_{base_name}.json > {directory}/output_initial_ratio_{base_name}.txt")
-    run_script(f"python3 output_examine.py {directory}/output_initial_ratio_{base_name}.txt")
+    run_script(f"python3 output_examine.py {directory}/output_initial_ratio_{base_name}.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00'")
     run_script(f"python3 gap_duration_analysis.py {directory}/output_initial_ratio_{base_name}_gaps_report.txt {directory}/gap_duration_analysis_initial_ratio_{base_name}.txt")
 
     # Iterate over the denied numbers and run the repetitions for each
@@ -26,7 +26,7 @@ def process_source_file(source_file, base_name, repetitions, denied_numbers, lab
             run_script(f"python3 change_tle_resilience.py {source_file} {directory}/imaging_{base_name}.tle {denied}")
             run_script(f"python3 create_config.py {directory}/imaging_{base_name}.tle gs.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00' '1' {directory}/output_resilience_{base_name}_{label}.json")
             run_script(f"python3 imagesatellite.py {directory}/output_resilience_{base_name}_{label}.json > {directory}/output_resilience_{base_name}_{label}.txt")
-            run_script(f"python3 output_examine.py {directory}/output_resilience_{base_name}_{label}.txt")
+            run_script(f"python3 output_examine.py {directory}/output_resilience_{base_name}_{label}.txt '2024-04-09 12:00:00' '2024-04-10 12:00:00'")
             run_script(f"python3 gap_duration_analysis.py {directory}/output_resilience_{base_name}_{label}_gaps_report.txt {directory}/gap_duration_analysis_resilience_{base_name}_{label}.txt")
 
             print(f"Cycle {i + 1} with {denied} denied completed for {base_name} (label: {label}).")

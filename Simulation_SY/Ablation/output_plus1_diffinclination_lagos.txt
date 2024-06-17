@@ -22,18 +22,6 @@ Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713068604.094296. endTimeUnix: 17
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713111503.26531. endTimeUnix: 1713111633.590936
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713154623.892093. endTimeUnix: 1713154896.638512
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713240664.615306. endTimeUnix: 1713240893.743614
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712682910.939967. endTimeUnix: 1712683138.40194
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712768765.824195. endTimeUnix: 1712769031.896781
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712811982.096648. endTimeUnix: 1712812055.087239
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712854636.047065. endTimeUnix: 1712854910.858851
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712897788.458548. endTimeUnix: 1712897997.57747
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712940520.306551. endTimeUnix: 1712940776.691883
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712983638.775712. endTimeUnix: 1712983897.714802
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713026422.656383. endTimeUnix: 1713026625.576627
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713069506.780287. endTimeUnix: 1713069781.962379
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713112380.924078. endTimeUnix: 1713112419.976049
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713155389.603531. endTimeUnix: 1713155653.673955
-Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713241289.033041. endTimeUnix: 1713241511.130368
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712684317.137771. endTimeUnix: 1712684587.343588
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712727517.405643. endTimeUnix: 1712727770.19534
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712770360.487. endTimeUnix: 1712770581.108414
@@ -46,6 +34,18 @@ Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713108460.501488. endTimeUnix: 17
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713151757.317378. endTimeUnix: 1713151815.443154
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713194474.814101. endTimeUnix: 1713194753.016777
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713237695.866451. endTimeUnix: 1713237917.012184
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712682910.939967. endTimeUnix: 1712683138.40194
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712768765.824195. endTimeUnix: 1712769031.896781
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712811982.096648. endTimeUnix: 1712812055.087239
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712854636.047065. endTimeUnix: 1712854910.858851
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712897788.458548. endTimeUnix: 1712897997.57747
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712940520.306551. endTimeUnix: 1712940776.691883
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712983638.775712. endTimeUnix: 1712983897.714802
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713026422.656383. endTimeUnix: 1713026625.576627
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713069506.780287. endTimeUnix: 1713069781.962379
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713112380.924078. endTimeUnix: 1713112419.976049
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713155389.603531. endTimeUnix: 1713155653.673955
+Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713241289.033041. endTimeUnix: 1713241511.130368
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712682967.513669. endTimeUnix: 1712683240.782475
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712732330.00203. endTimeUnix: 1712732474.619351
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1712769180.752381. endTimeUnix: 1712769464.896645
@@ -61,4 +61,4 @@ Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713151383.54942. endTimeUnix: 171
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713194252.546106. endTimeUnix: 1713194521.681681
 Pass. nodeID: 10. nodeType: 1. startTimeUnix: 1713237528.755268. endTimeUnix: 1713237780.139058
 [Simulator Info] FOVs computed.
-[Simulator Info] Time required to run the simulation: 2.0274124700008542 seconds.
+[Simulator Info] Time required to run the simulation: 2.027770785998655 seconds.

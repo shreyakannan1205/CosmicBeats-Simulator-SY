@@ -88,4 +88,4 @@ Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713199347.485881. endTimeUnix: 171
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713205235.557183. endTimeUnix: 1713205508.408288
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713267185.514947. endTimeUnix: 1713267452.409134
 [Simulator Info] FOVs computed.
-[Simulator Info] Time required to run the simulation: 2.0268953850027174 seconds.
+[Simulator Info] Time required to run the simulation: 2.025652058999185 seconds.

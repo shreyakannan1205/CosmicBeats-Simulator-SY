@@ -3,70 +3,71 @@ import os
 import re
 from datetime import timedelta
 import numpy as np
-import plot_config 
+import plot_config
 
-def parse_gap_report(file_path):
+def parse_gap_duration_file(file_path):
+    total_durations = []
+    largest_gap = timedelta()
     with open(file_path, 'r') as file:
-        content = file.read()
+        for line in file:
+            if line.startswith("Total gap duration:"):
+                total_gap_str = line.split("Total gap duration: ")[1].strip()
+                total_durations.append(parse_timedelta(total_gap_str).total_seconds())
+            elif line.startswith("Largest Gap of"):
+                largest_gap_str = re.search(r"Largest Gap of ([\d:,.\s]+) found", line).group(1).strip()
+                current_gap = parse_timedelta(largest_gap_str).total_seconds()
+                if current_gap > largest_gap.total_seconds():
+                    largest_gap = timedelta(seconds=current_gap)
+    if total_durations:
+        return np.mean(total_durations), largest_gap.total_seconds()
+    else:
+        return 0, 0
 
-    gap_count = content.count("Gap of")
-
-    total_gap_search = re.search(r"Total gap duration: (.+)", content)
-    total_gap_duration = timedelta()
-    if total_gap_search:
-        total_gap_str = total_gap_search.group(1)
-        h, m, s = map(float, total_gap_str.split(':'))
-        total_gap_duration = timedelta(hours=h, minutes=m, seconds=s)
-
-    gap_durations = re.findall(r"Gap of (.+?) found", content)
-    largest_gap_duration = timedelta()
-    for gap in gap_durations:
-        h, m, s = map(float, gap.split(':'))
-        current_gap_duration = timedelta(hours=h, minutes=m, seconds=float(s))
-        if current_gap_duration > largest_gap_duration:
-            largest_gap_duration = current_gap_duration
-
-    return gap_count, total_gap_duration.total_seconds(), largest_gap_duration.total_seconds()
+def parse_timedelta(time_str):
+    days = 0
+    if 'day' in time_str:
+        days_part, time_str = time_str.split(', ')
+        days = int(days_part.split(' ')[0])
+    h, m, s = map(float, time_str.split(':'))
+    return timedelta(days=days, hours=h, minutes=m, seconds=s)
 
 folder_path = "NumSat"
-file_names = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('_gaps_report.txt')]
+file_names = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.startswith('total_gap_duration_analysis_') and f.endswith('.txt')]
 
 data = {}
 for file_path in file_names:
-    num_satellites = int(re.search(r"(\d+)", file_path).group(1))
-    gap_count, total_gap_duration, largest_gap_duration = parse_gap_report(file_path)
-    data[num_satellites] = (gap_count, total_gap_duration, largest_gap_duration)
+    num_satellites = int(re.search(r"total_gap_duration_analysis_(\d+).txt", file_path).group(1))
+    avg_total_gap_duration, largest_gap = parse_gap_duration_file(file_path)
+    data[num_satellites] = (avg_total_gap_duration, largest_gap)
 
 sorted_data = sorted(data.items())
 
-for num_sat, info in sorted_data:
-    gap_count, total_gap_duration, largest_gap_duration = info
-    print(f"Number of Satellites: {num_sat}, Total Gap Duration: {total_gap_duration:.2f}, Largest Gap: {largest_gap_duration:.2f}")
+for num_sat, (avg_total_gap_duration, largest_gap) in sorted_data:
+    print(f"Number of Satellites: {num_sat}, Average Total Gap Duration: {avg_total_gap_duration:.2f} seconds, Largest Gap: {largest_gap:.2f} seconds")
 
-fig2, ax2 = plt.subplots(figsize=(10,6))
-total_gaps = [item[1][1] for item in sorted_data]
-largest_gaps = [item[1][2] for item in sorted_data]
+fig, ax1 = plt.subplots(figsize=(10,6))
+avg_total_gaps = [item[1][0] for item in sorted_data]
+largest_gaps = [item[1][1] for item in sorted_data]
 
 bar_width = 0.35
 index = np.arange(len(sorted_data))
 
-rects1 = ax2.bar(index - bar_width/2, total_gaps, bar_width, color='blue', label='Total Gap Duration', hatch=plot_config.hatches[0], alpha=0.7)
+rects1 = ax1.bar(index - bar_width/2, avg_total_gaps, bar_width, color='blue', label='Average Total Gap Duration', hatch=plot_config.hatches[0], alpha=0.7)
 
-ax3 = ax2.twinx()
-rects2 = ax3.bar(index + bar_width/2, largest_gaps, bar_width, color='red', label='Largest Gap', alpha=0.5, hatch=plot_config.hatches[1])
+ax2 = ax1.twinx()
+rects2 = ax2.bar(index + bar_width/2, largest_gaps, bar_width, color='red', label='Largest Gap', hatch=plot_config.hatches[1], alpha=0.5)
 
-ax2.set_xlabel('Number of Satellites')
-ax2.set_ylabel('Total Gap Duration (seconds)', color='blue')
-ax3.set_ylabel('Largest Gap (seconds)', color='red')
-ax2.set_xticks(index)
-ax2.set_xticklabels([item[0] for item in sorted_data])
-ax2.tick_params(axis='y', labelcolor='blue')
-ax3.tick_params(axis='y', labelcolor='red')
+ax1.set_xlabel('Number of Satellites')
+ax1.set_ylabel('Average Total Gap Duration (seconds)', color='blue')
+ax2.set_ylabel('Largest Gap (seconds)', color='red')
+ax1.set_xticks(index)
+ax1.set_xticklabels([item[0] for item in sorted_data])
+ax1.tick_params(axis='y', labelcolor='blue')
+ax2.tick_params(axis='y', labelcolor='red')
 
-ax2.legend(loc='upper left')
-ax3.legend(loc='upper right')
+fig.tight_layout()
+ax1.legend(loc='upper left')
+ax2.legend(loc='upper right')
 
-fig2.tight_layout()  
-# plt.title('Satellite Communication Gap Analysis - 24h period', fontsize=plot_config.xyfontsize)
-plt.savefig('plot_gap_analysis_numsat.png')  
+plt.savefig('plot_gap_analysis_numsat.png')
 # plt.show()

@@ -14,23 +14,6 @@ Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713111538.088658. endTimeUnix: 171
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713167253.328519. endTimeUnix: 1713167533.268984
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713197431.063446. endTimeUnix: 1713197650.912062
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713253135.718855. endTimeUnix: 1713253404.143148
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712685205.410362. endTimeUnix: 1712685479.802758
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712740950.841772. endTimeUnix: 1712741188.677295
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712771077.757581. endTimeUnix: 1712771358.300699
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712826809.201298. endTimeUnix: 1712827077.079386
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712856956.716272. endTimeUnix: 1712857229.506464
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712912678.489672. endTimeUnix: 1712912958.309358
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712942843.670935. endTimeUnix: 1712943092.21326
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712998556.812035. endTimeUnix: 1712998834.26388
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713022840.221741. endTimeUnix: 1713022920.089423
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713028742.343017. endTimeUnix: 1713028942.43652
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713084443.694883. endTimeUnix: 1713084705.243655
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713108672.99597. endTimeUnix: 1713108853.000345
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713114670.569152. endTimeUnix: 1713114762.574004
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713170340.089809. endTimeUnix: 1713170570.741264
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713194529.806481. endTimeUnix: 1713194761.035401
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713250337.558615. endTimeUnix: 1713250431.422157
-Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713256248.510178. endTimeUnix: 1713256427.913188
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712683665.110932. endTimeUnix: 1712683919.618785
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712739533.972571. endTimeUnix: 1712739704.999525
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712745516.339278. endTimeUnix: 1712745660.975749
@@ -48,6 +31,23 @@ Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713169595.53915. endTimeUnix: 1713
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713193830.44753. endTimeUnix: 1713194063.692775
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713249732.254233. endTimeUnix: 1713249822.779673
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713255646.329417. endTimeUnix: 1713255836.285619
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712685205.410362. endTimeUnix: 1712685479.802758
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712740950.841772. endTimeUnix: 1712741188.677295
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712771077.757581. endTimeUnix: 1712771358.300699
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712826809.201298. endTimeUnix: 1712827077.079386
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712856956.716272. endTimeUnix: 1712857229.506464
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712912678.489672. endTimeUnix: 1712912958.309358
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712942843.670935. endTimeUnix: 1712943092.21326
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712998556.812035. endTimeUnix: 1712998834.26388
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713022840.221741. endTimeUnix: 1713022920.089423
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713028742.343017. endTimeUnix: 1713028942.43652
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713084443.694883. endTimeUnix: 1713084705.243655
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713108672.99597. endTimeUnix: 1713108853.000345
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713114670.569152. endTimeUnix: 1713114762.574004
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713170340.089809. endTimeUnix: 1713170570.741264
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713194529.806481. endTimeUnix: 1713194761.035401
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713250337.558615. endTimeUnix: 1713250431.422157
+Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713256248.510178. endTimeUnix: 1713256427.913188
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712686644.794709. endTimeUnix: 1712686907.041325
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712742453.702741. endTimeUnix: 1712742737.098991
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1712766782.83817. endTimeUnix: 1712766855.132004
@@ -66,4 +66,4 @@ Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713166601.730686. endTimeUnix: 171
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713196799.80837. endTimeUnix: 1713197075.531518
 Pass. nodeID: 8. nodeType: 1. startTimeUnix: 1713252615.290416. endTimeUnix: 1713252899.2033
 [Simulator Info] FOVs computed.
-[Simulator Info] Time required to run the simulation: 2.0219546489970526 seconds.
+[Simulator Info] Time required to run the simulation: 2.0269719120005902 seconds.

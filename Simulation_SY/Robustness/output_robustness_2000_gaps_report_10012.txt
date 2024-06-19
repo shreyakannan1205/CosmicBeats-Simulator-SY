@@ -1,0 +1,2 @@
+Gap of 0:01:02.329897 found between 2024-04-11 09:47:59 and 2024-04-11 09:49:02
+Total gap duration: 0:01:02.329897

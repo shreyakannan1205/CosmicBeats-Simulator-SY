@@ -1,0 +1,200 @@
+Total gap duration: 15:14:36.183577
+Largest Gap of 0:08:06.868210 found between 2024-04-16 10:58:34 and 2024-04-16 11:06:41
+Total gap duration: 16:20:53.373408
+Largest Gap of 0:10:20.553061 found between 2024-04-15 16:55:16 and 2024-04-15 17:05:37
+Total gap duration: 12:29:47.329553
+Largest Gap of 0:16:34.590944 found between 2024-04-11 16:11:58 and 2024-04-11 16:28:33
+Total gap duration: 14:00:55.865894
+Largest Gap of 0:08:58.748194 found between 2024-04-14 13:39:39 and 2024-04-14 13:48:38
+Total gap duration: 15:29:26.989222
+Largest Gap of 0:09:50.329447 found between 2024-04-11 03:52:44 and 2024-04-11 04:02:34
+Total gap duration: 13:15:35.327058
+Largest Gap of 0:11:53.996207 found between 2024-04-13 10:49:19 and 2024-04-13 11:01:13
+Total gap duration: 16:11:47.092588
+Largest Gap of 0:10:22.569667 found between 2024-04-14 13:14:49 and 2024-04-14 13:25:11
+Total gap duration: 14:07:37.206798
+Largest Gap of 0:10:40.676388 found between 2024-04-14 02:47:13 and 2024-04-14 02:57:53
+Total gap duration: 12:46:26.424917
+Largest Gap of 0:07:52.056864 found between 2024-04-16 04:43:35 and 2024-04-16 04:51:28
+Total gap duration: 14:29:00.493400
+Largest Gap of 0:12:26.870421 found between 2024-04-10 20:41:48 and 2024-04-10 20:54:15
+Total gap duration: 16:47:56.021891
+Largest Gap of 0:13:08.564784 found between 2024-04-09 17:57:32 and 2024-04-09 18:10:40
+Total gap duration: 16:05:36.142832
+Largest Gap of 0:11:54.867818 found between 2024-04-12 15:27:30 and 2024-04-12 15:39:25
+Total gap duration: 15:32:16.745682
+Largest Gap of 0:12:07.731598 found between 2024-04-12 06:31:11 and 2024-04-12 06:43:19
+Total gap duration: 16:43:26.299099
+Largest Gap of 0:10:40.106728 found between 2024-04-15 18:54:19 and 2024-04-15 19:05:00
+Total gap duration: 13:51:36.676553
+Largest Gap of 0:11:09.644930 found between 2024-04-13 16:41:12 and 2024-04-13 16:52:22
+Total gap duration: 13:53:49.130159
+Largest Gap of 0:11:09.077119 found between 2024-04-15 11:28:12 and 2024-04-15 11:39:21
+Total gap duration: 16:28:04.174376
+Largest Gap of 0:09:30.061884 found between 2024-04-15 16:44:44 and 2024-04-15 16:54:14
+Total gap duration: 13:32:10.937336
+Largest Gap of 0:13:38.557217 found between 2024-04-15 14:18:39 and 2024-04-15 14:32:18
+Total gap duration: 17:24:29.729354
+Largest Gap of 0:15:00.537300 found between 2024-04-15 18:29:12 and 2024-04-15 18:44:13
+Total gap duration: 16:04:37.889427
+Largest Gap of 0:10:05.131942 found between 2024-04-14 09:29:54 and 2024-04-14 09:39:59
+Total gap duration: 14:51:15.982208
+Largest Gap of 0:10:20.727271 found between 2024-04-11 11:13:57 and 2024-04-11 11:24:17
+Total gap duration: 16:27:06.110371
+Largest Gap of 0:09:55.045736 found between 2024-04-10 17:14:33 and 2024-04-10 17:24:28
+Total gap duration: 11:16:12.058269
+Largest Gap of 0:08:06.710778 found between 2024-04-09 14:34:51 and 2024-04-09 14:42:58
+Total gap duration: 14:05:16.703174
+Largest Gap of 0:10:25.851001 found between 2024-04-14 14:40:06 and 2024-04-14 14:50:32
+Total gap duration: 16:00:53.065589
+Largest Gap of 0:09:53.374130 found between 2024-04-09 23:26:46 and 2024-04-09 23:36:39
+Total gap duration: 11:46:34.291269
+Largest Gap of 0:09:55.150785 found between 2024-04-16 01:23:00 and 2024-04-16 01:32:55
+Total gap duration: 16:03:21.188884
+Largest Gap of 0:14:05.195938 found between 2024-04-12 11:08:15 and 2024-04-12 11:22:20
+Total gap duration: 14:07:03.345296
+Largest Gap of 0:10:16.388932 found between 2024-04-14 11:08:59 and 2024-04-14 11:19:16
+Total gap duration: 13:51:53.509047
+Largest Gap of 0:08:02.398831 found between 2024-04-10 22:18:03 and 2024-04-10 22:26:06
+Total gap duration: 14:16:01.981438
+Largest Gap of 0:09:19.608190 found between 2024-04-13 07:25:48 and 2024-04-13 07:35:08
+Total gap duration: 15:13:46.048350
+Largest Gap of 0:11:36.168665 found between 2024-04-11 18:31:04 and 2024-04-11 18:42:40
+Total gap duration: 13:51:48.637573
+Largest Gap of 0:11:20.794094 found between 2024-04-12 03:28:03 and 2024-04-12 03:39:24
+Total gap duration: 13:36:11.370852
+Largest Gap of 0:08:50.485394 found between 2024-04-14 09:30:58 and 2024-04-14 09:39:49
+Total gap duration: 16:03:09.652342
+Largest Gap of 0:09:09.633872 found between 2024-04-13 02:54:38 and 2024-04-13 03:03:47
+Total gap duration: 15:45:42.522931
+Largest Gap of 0:14:47.749037 found between 2024-04-11 15:32:58 and 2024-04-11 15:47:46
+Total gap duration: 14:52:34.578558
+Largest Gap of 0:10:11.575761 found between 2024-04-10 21:36:19 and 2024-04-10 21:46:31
+Total gap duration: 14:20:08.549823
+Largest Gap of 0:10:04.215270 found between 2024-04-11 23:30:02 and 2024-04-11 23:40:06
+Total gap duration: 16:43:34.305368
+Largest Gap of 0:11:53.578910 found between 2024-04-13 05:39:38 and 2024-04-13 05:51:32
+Total gap duration: 15:59:21.504687
+Largest Gap of 0:10:10.367761 found between 2024-04-15 15:04:38 and 2024-04-15 15:14:48
+Total gap duration: 14:25:07.221920
+Largest Gap of 0:08:24.297929 found between 2024-04-14 15:03:20 and 2024-04-14 15:11:44
+Total gap duration: 14:51:58.039512
+Largest Gap of 0:09:38.959966 found between 2024-04-10 08:18:09 and 2024-04-10 08:27:48
+Total gap duration: 16:33:02.242668
+Largest Gap of 0:09:25.006310 found between 2024-04-15 11:19:00 and 2024-04-15 11:28:25
+Total gap duration: 15:33:17.782539
+Largest Gap of 0:09:25.137752 found between 2024-04-14 03:41:55 and 2024-04-14 03:51:20
+Total gap duration: 16:19:47.992700
+Largest Gap of 0:11:15.797220 found between 2024-04-14 02:44:50 and 2024-04-14 02:56:06
+Total gap duration: 13:27:24.615193
+Largest Gap of 0:11:18.725065 found between 2024-04-15 13:51:39 and 2024-04-15 14:02:58
+Total gap duration: 14:08:11.147411
+Largest Gap of 0:09:18.052334 found between 2024-04-12 13:10:08 and 2024-04-12 13:19:26
+Total gap duration: 16:20:50.298300
+Largest Gap of 0:09:48.539073 found between 2024-04-09 20:42:12 and 2024-04-09 20:52:00
+Total gap duration: 14:38:16.759888
+Largest Gap of 0:11:00.328786 found between 2024-04-13 05:28:17 and 2024-04-13 05:39:17
+Total gap duration: 15:19:37.465123
+Largest Gap of 0:11:12.842217 found between 2024-04-11 02:08:48 and 2024-04-11 02:20:01
+Total gap duration: 14:06:47.710584
+Largest Gap of 0:10:59.489563 found between 2024-04-15 12:22:10 and 2024-04-15 12:33:09
+Total gap duration: 13:37:17.148562
+Largest Gap of 0:10:34.692071 found between 2024-04-10 10:37:01 and 2024-04-10 10:47:36
+Total gap duration: 15:04:33.934966
+Largest Gap of 0:09:54.445780 found between 2024-04-12 17:51:38 and 2024-04-12 18:01:32
+Total gap duration: 15:04:52.149195
+Largest Gap of 0:09:57.855498 found between 2024-04-15 20:48:49 and 2024-04-15 20:58:47
+Total gap duration: 14:04:09.441435
+Largest Gap of 0:09:18.387597 found between 2024-04-14 14:04:50 and 2024-04-14 14:14:08
+Total gap duration: 16:51:45.123973
+Largest Gap of 0:12:31.537947 found between 2024-04-09 20:22:12 and 2024-04-09 20:34:44
+Total gap duration: 14:20:18.724236
+Largest Gap of 0:08:21.736687 found between 2024-04-16 09:07:18 and 2024-04-16 09:15:39
+Total gap duration: 18:10:06.509045
+Largest Gap of 0:14:40.301763 found between 2024-04-10 11:53:35 and 2024-04-10 12:08:16
+Total gap duration: 13:16:08.266909
+Largest Gap of 0:08:50.519191 found between 2024-04-11 21:02:14 and 2024-04-11 21:11:05
+Total gap duration: 12:41:57.543831
+Largest Gap of 0:09:30.707788 found between 2024-04-09 18:33:45 and 2024-04-09 18:43:16
+Total gap duration: 14:40:49.122441
+Largest Gap of 0:10:53.691284 found between 2024-04-14 15:37:48 and 2024-04-14 15:48:42
+Total gap duration: 14:10:56.858566
+Largest Gap of 0:08:23.796905 found between 2024-04-14 15:45:31 and 2024-04-14 15:53:54
+Total gap duration: 16:26:58.016816
+Largest Gap of 0:10:41.952342 found between 2024-04-16 10:47:07 and 2024-04-16 10:57:49
+Total gap duration: 12:12:00.950118
+Largest Gap of 0:07:34.498641 found between 2024-04-13 09:55:55 and 2024-04-13 10:03:29
+Total gap duration: 14:17:24.972953
+Largest Gap of 0:13:20.082403 found between 2024-04-14 16:41:41 and 2024-04-14 16:55:01
+Total gap duration: 12:48:20.262604
+Largest Gap of 0:08:31.894829 found between 2024-04-12 18:56:14 and 2024-04-12 19:04:46
+Total gap duration: 14:17:32.713281
+Largest Gap of 0:11:01.730026 found between 2024-04-12 19:23:52 and 2024-04-12 19:34:54
+Total gap duration: 14:48:40.291871
+Largest Gap of 0:11:50.904814 found between 2024-04-10 12:56:05 and 2024-04-10 13:07:56
+Total gap duration: 12:26:09.204432
+Largest Gap of 0:10:10.393632 found between 2024-04-12 07:25:39 and 2024-04-12 07:35:49
+Total gap duration: 13:56:47.809832
+Largest Gap of 0:09:38.199479 found between 2024-04-14 21:25:23 and 2024-04-14 21:35:01
+Total gap duration: 17:17:46.450190
+Largest Gap of 0:10:00.423660 found between 2024-04-11 18:17:10 and 2024-04-11 18:27:11
+Total gap duration: 12:19:09.077738
+Largest Gap of 0:08:19.085082 found between 2024-04-15 02:32:49 and 2024-04-15 02:41:08
+Total gap duration: 13:23:24.259523
+Largest Gap of 0:10:17.011379 found between 2024-04-10 11:18:44 and 2024-04-10 11:29:01
+Total gap duration: 15:40:34.412422
+Largest Gap of 0:09:02.133772 found between 2024-04-15 15:21:13 and 2024-04-15 15:30:15
+Total gap duration: 15:42:14.054846
+Largest Gap of 0:11:15.374732 found between 2024-04-12 10:37:24 and 2024-04-12 10:48:39
+Total gap duration: 12:28:52.347064
+Largest Gap of 0:10:59.974051 found between 2024-04-10 17:26:24 and 2024-04-10 17:37:24
+Total gap duration: 15:22:30.705543
+Largest Gap of 0:08:16.705091 found between 2024-04-11 06:43:02 and 2024-04-11 06:51:18
+Total gap duration: 15:16:30.693222
+Largest Gap of 0:12:12.059920 found between 2024-04-16 00:46:08 and 2024-04-16 00:58:20
+Total gap duration: 13:46:49.366580
+Largest Gap of 0:07:11.155578 found between 2024-04-15 08:04:53 and 2024-04-15 08:12:04
+Total gap duration: 16:34:21.845676
+Largest Gap of 0:13:05.915190 found between 2024-04-13 10:16:17 and 2024-04-13 10:29:23
+Total gap duration: 11:58:45.330828
+Largest Gap of 0:06:10.904365 found between 2024-04-10 11:58:57 and 2024-04-10 12:05:08
+Total gap duration: 14:10:58.316862
+Largest Gap of 0:13:51.443046 found between 2024-04-15 23:03:42 and 2024-04-15 23:17:34
+Total gap duration: 12:50:20.482607
+Largest Gap of 0:10:19.478555 found between 2024-04-10 06:57:06 and 2024-04-10 07:07:26
+Total gap duration: 15:21:03.625777
+Largest Gap of 0:12:23.451650 found between 2024-04-14 17:16:27 and 2024-04-14 17:28:51
+Total gap duration: 13:54:03.779006
+Largest Gap of 0:07:42.905315 found between 2024-04-12 18:31:53 and 2024-04-12 18:39:36
+Total gap duration: 15:11:13.646480
+Largest Gap of 0:09:40.571343 found between 2024-04-14 15:37:39 and 2024-04-14 15:47:19
+Total gap duration: 14:46:17.022371
+Largest Gap of 0:09:31.871692 found between 2024-04-13 06:10:00 and 2024-04-13 06:19:32
+Total gap duration: 15:59:52.878674
+Largest Gap of 0:08:18.004018 found between 2024-04-15 16:06:58 and 2024-04-15 16:15:16
+Total gap duration: 14:42:05.470972
+Largest Gap of 0:07:56.009246 found between 2024-04-12 20:20:27 and 2024-04-12 20:28:23
+Total gap duration: 15:22:26.467468
+Largest Gap of 0:16:24.107718 found between 2024-04-14 18:19:53 and 2024-04-14 18:36:18
+Total gap duration: 15:25:19.271777
+Largest Gap of 0:09:10.978505 found between 2024-04-14 10:07:46 and 2024-04-14 10:16:57
+Total gap duration: 13:09:44.570824
+Largest Gap of 0:10:10.948084 found between 2024-04-11 06:12:37 and 2024-04-11 06:22:48
+Total gap duration: 15:30:35.118951
+Largest Gap of 0:10:37.390750 found between 2024-04-13 15:31:31 and 2024-04-13 15:42:08
+Total gap duration: 14:12:10.328598
+Largest Gap of 0:15:10.554104 found between 2024-04-09 16:40:52 and 2024-04-09 16:56:03
+Total gap duration: 13:55:08.993471
+Largest Gap of 0:12:09.768321 found between 2024-04-11 03:16:24 and 2024-04-11 03:28:33
+Total gap duration: 13:25:26.933309
+Largest Gap of 0:11:10.735328 found between 2024-04-12 18:29:00 and 2024-04-12 18:40:10
+Total gap duration: 12:37:08.120263
+Largest Gap of 0:07:33.847226 found between 2024-04-15 02:34:13 and 2024-04-15 02:41:47
+Total gap duration: 14:06:30.799217
+Largest Gap of 0:08:54.597341 found between 2024-04-10 17:44:10 and 2024-04-10 17:53:04
+Total gap duration: 15:50:23.362863
+Largest Gap of 0:08:33.971543 found between 2024-04-13 02:15:12 and 2024-04-13 02:23:46
+Total gap duration: 14:47:55.344543
+Largest Gap of 0:08:55.479896 found between 2024-04-09 17:10:44 and 2024-04-09 17:19:40
+Total gap duration: 16:20:07.308986
+Largest Gap of 0:12:42.861362 found between 2024-04-13 11:03:34 and 2024-04-13 11:16:17

@@ -28,5 +28,4 @@ if __name__ == "__main__":
         print("Please ensure 'number_of_segments_to_extract' is an integer.")
         sys.exit(1)
 
-    # Call the function
     extract_random_segments(input_file_path, output_file_path, number_of_segments_to_extract)

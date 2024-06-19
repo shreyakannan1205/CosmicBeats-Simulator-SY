@@ -7,38 +7,56 @@ import plot_config
 
 def parse_gap_duration_file(file_path):
     total_durations = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            if "Total gap duration:" in line:
+                total_gap_str = line.split("Total gap duration: ")[1].strip()
+                total_durations.append(parse_duration(total_gap_str).total_seconds())
+    if total_durations:
+        return np.mean(total_durations)
+    else:
+        return 0
+
+def parse_largest_gap_file(file_path):
     largest_gap = timedelta()
     with open(file_path, 'r') as file:
         for line in file:
-            if line.startswith("Total gap duration:"):
-                total_gap_str = line.split("Total gap duration: ")[1].strip()
-                total_durations.append(parse_timedelta(total_gap_str).total_seconds())
-            elif line.startswith("Largest Gap of"):
+            if "Largest Gap of" in line:
                 largest_gap_str = re.search(r"Largest Gap of ([\d:,.\s]+) found", line).group(1).strip()
-                current_gap = parse_timedelta(largest_gap_str).total_seconds()
+                current_gap = parse_duration(largest_gap_str).total_seconds()
                 if current_gap > largest_gap.total_seconds():
                     largest_gap = timedelta(seconds=current_gap)
-    if total_durations:
-        return np.mean(total_durations), largest_gap.total_seconds()
-    else:
-        return 0, 0
+    return largest_gap.total_seconds()
 
-def parse_timedelta(time_str):
-    days = 0
-    if 'day' in time_str:
-        days_part, time_str = time_str.split(', ')
-        days = int(days_part.split(' ')[0])
-    h, m, s = map(float, time_str.split(':'))
-    return timedelta(days=days, hours=h, minutes=m, seconds=s)
+def parse_duration(duration_str):
+    if duration_str == "0:00:00":
+        return timedelta(seconds=0)
+    if "day" in duration_str:
+        days, time_str = duration_str.split(", ")
+        days = int(days.split()[0])
+        h, m, s = map(float, time_str.split(':'))
+        return timedelta(days=days, hours=h, minutes=m, seconds=int(s), microseconds=int((s - int(s)) * 1e6))
+    else:
+        h, m, s = map(float, duration_str.split(':'))
+        return timedelta(hours=h, minutes=m, seconds=int(s), microseconds=int((s - int(s)) * 1e6))
 
 folder_path = "NumSat"
-file_names = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.startswith('total_gap_duration_analysis_') and f.endswith('.txt')]
+gap_duration_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.startswith('output_') and f.endswith('_random_gap_duration_analysis_10001.txt')]
+largest_gap_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.startswith('total_gap_duration_analysis_') and f.endswith('.txt')]
 
 data = {}
-for file_path in file_names:
+for file_path in gap_duration_files:
+    num_satellites = int(re.search(r"output_(\d+)_random_gap_duration_analysis_10001.txt", file_path).group(1))
+    avg_total_gap_duration = parse_gap_duration_file(file_path)
+    data[num_satellites] = [avg_total_gap_duration, 0]
+
+for file_path in largest_gap_files:
     num_satellites = int(re.search(r"total_gap_duration_analysis_(\d+).txt", file_path).group(1))
-    avg_total_gap_duration, largest_gap = parse_gap_duration_file(file_path)
-    data[num_satellites] = (avg_total_gap_duration, largest_gap)
+    largest_gap = parse_largest_gap_file(file_path)
+    if num_satellites in data:
+        data[num_satellites][1] = largest_gap
+    else:
+        data[num_satellites] = [0, largest_gap]
 
 sorted_data = sorted(data.items())
 
@@ -70,4 +88,4 @@ ax1.legend(loc='upper left')
 ax2.legend(loc='upper right')
 
 plt.savefig('plot_gap_analysis_numsat.png')
-# plt.show()
+print("Plot saved as 'plot_gap_analysis_numsat.png'")

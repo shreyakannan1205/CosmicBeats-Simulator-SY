@@ -1,0 +1,35 @@
+<One City Per Country, in Descending order of Population> - ex. Mumbai (9) and Beijing (8) was excluded for this reason
+https://www.macrotrends.net/global-metrics/cities/largest-cities-by-population
+
+1. Tokyo (Japan)
+2. Delhi (India)
+3. Shanghai (China)
+4. Dhaka (Bangladesh) 
+5. Sao Paulo (Brazil)
+6. Cairo (Egypt)
+7. Mexico City (Mexico)
+8. New York (US) (O)
+9. Karachi (Pakistan) 
+10. Kinshasa (DR Congo) 
+11. Lagos (Nigeria)
+12. Istanbul (Turkey) 
+13. Buenos Aires (Argentina)
+14. Manila (Philippines) 
+15. Moscow (Russia) 
+16. Bogota (Columbia)  
+17. Jakarta (Indonesia) 
+18. Lima (Peru) 
+19. Paris (France)
+20. Bangkok (Thailand)
+
++ To include Every Continent: 21. Melbourne (Australia)
+
+
++ Maybe if Needed 
+22. Seoul (South Korea)
+23. London (UK)
+24. Teheran (Iran)
+25. Ho Chi Minh (Vietnam)
+ 
+ + Can that one satellite cover all people of that one city? the area of the city will also matter? 
+ 

@@ -100,8 +100,7 @@ def main():
         total_durations = []
         for city, population in ground_stations:
             filename = f"output_robustness_{count}_gap_duration_analysis_{city}.txt"
-            folder_path = "Robustness"
-            durations = analyze_file_longer(folder_path, filename, population)
+            durations = analyze_file_longer(directory, filename, population)
             total_durations.extend(durations)
 
         if total_durations:

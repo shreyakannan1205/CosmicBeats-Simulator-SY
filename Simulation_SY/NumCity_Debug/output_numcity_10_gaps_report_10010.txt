@@ -1,8 +1,0 @@
-Initial gap of 1 day, 4:09:14.428536 found between 2024-04-09 12:00:00 and 2024-04-10 16:09:14
-Gap of 11:18:38.365140 found between 2024-04-10 16:12:09 and 2024-04-11 03:30:47
-Gap of 1 day, 11:46:47.552438 found between 2024-04-11 03:33:43 and 2024-04-12 15:20:30
-Gap of 11:20:29.193628 found between 2024-04-12 15:23:29 and 2024-04-13 02:43:58
-Gap of 1 day, 11:52:10.799930 found between 2024-04-13 02:46:59 and 2024-04-14 14:39:10
-Gap of 11:21:54.597027 found between 2024-04-14 14:42:18 and 2024-04-15 02:04:12
-Final gap of 1 day, 9:52:37.991909 found between 2024-04-15 02:07:22 and 2024-04-16 12:00:00
-Total gap duration: 6 days, 23:41:52.928608

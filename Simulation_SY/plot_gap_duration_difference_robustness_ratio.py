@@ -17,24 +17,13 @@ def parse_duration(duration_str):
         h, m, s = map(float, duration_str.split(':'))
         return timedelta(hours=h, minutes=m, seconds=int(s), microseconds=int((s - int(s)) * 1e6))
 
-def analyze_file_longer(folder_path, filename, population):
+def analyze_file_longer_ratio(folder_path, filename, original_duration, population):
     durations = []
-    original_duration = None
-
     full_path = os.path.join(folder_path, filename)
+
     with open(full_path, 'r') as file:
-        first_line = next(file)
-        match = re.search(r'Total gap duration: (\d+ days, \d+:\d+:\d+\.\d+|\d+ day, \d+:\d+:\d+\.\d+|\d+:\d+:\d+\.\d+|0:00:00)', first_line)
-        if match:
-            original_duration = parse_duration(match.group(1))
-            print(f"Original duration: {original_duration}")
-
-        if not original_duration:
-            print(f"No original duration found in file: {filename}")
-            return durations
-
         for line in file:
-            match = re.search(r'Total gap duration: (\d+ days, \d+:\d+:\d+\.\d+|\d+ day, \d+:\d+:\d+\.\d+|\d+:\d+:\d+\.\d+|0:00:00)', line)
+            match = re.search(r'Total gap duration: ((\d+ days, \d+:\d+:\d+\.\d+|\d+ day, \d+:\d+:\d+\.\d+|\d+:\d+:\d+\.\d+|0:00:00))', line)
             if match:
                 duration = parse_duration(match.group(1))
                 if duration < original_duration:
@@ -83,9 +72,8 @@ def get_ground_stations():
         ("10021", 5316000), # Melbourne (Australia)
     ]
 
-
 def main():
-    directory = "Robustness_Ratio_Debug"
+    directory = "Robustness_Ratio"
     
     labels = [f"{i}_1" for i in range(1, 11)]
     ground_stations = get_ground_stations()
@@ -98,14 +86,27 @@ def main():
     hatches = plot_config.hatches[:num_labels]
     
     total_population = sum(population for _, population in ground_stations)
-    num_cities = len(ground_stations)
 
     for label in labels:
         total_durations = []
         for city, population in ground_stations:
+            original_filename = f"output_robustness_ratio_1000_gap_duration_analysis_{city}.txt"
+
+            original_duration = None
+            original_path = os.path.join(directory, original_filename)
+            with open(original_path, 'r') as file:
+                first_line = next(file)
+                match = re.search(r'Total gap duration: ((\d+ days, \d+:\d+:\d+\.\d+|\d+ day, \d+:\d+:\d+\.\d+|\d+:\d+:\d+\.\d+|0:00:00))', first_line)
+                if match:
+                    original_duration = parse_duration(match.group(1))
+                    print(f"Original duration for city {city}: {original_duration}")
+
+            if original_duration is None:
+                print(f"No original duration found in file: {original_filename}")
+                continue
+
             filename = f"output_robustness_ratio_1000_{label}_gap_duration_analysis_{city}.txt"
-            folder_path = "Robustness_Ratio_Debug"
-            durations = analyze_file_longer(folder_path, filename, population)
+            durations = analyze_file_longer_ratio(directory, filename, original_duration, population)
             total_durations.extend(durations)
 
         if total_durations:
@@ -114,30 +115,28 @@ def main():
             std_deviation = np.std(total_durations) / total_population
             results.append(population_weighted_avg_diff)
             errors.append(std_deviation)
+            avg_labels.append(format_seconds(population_weighted_avg_diff))
         else:
             results.append(0)
             errors.append(0)
+            avg_labels.append("0:00:00")
             print(f"No durations found for satellite ratio {label}")
-
 
     new_labels = [f"{label.split('_')[0]}:1..:1" for label in labels]
 
-    # Plotting the results with error bars
     fig, ax = plt.subplots()
     bars = ax.bar(new_labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
     ax.set_ylabel('Population-Weighted \n Avg. Difference in Coverage \n (Seconds)')
-    ax.set_xlabel('Ratio Between Different Parties \n (Total: 1000 Satellites \n Largest Party Denies Service')
+    ax.set_xlabel('Ratio Between Different Parties \n (Total: 1000 Satellites \n Largest Party Denies Service)')
 
-    # Adding the average value on top of each bar in MM:SS format
     for bar, label in zip(bars, avg_labels):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width() * 0.85, height, label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.savefig('plot_gap_duration_difference_resilience_ratio.png', dpi=300)
-    print("Plot saved as 'plot_gap_duration_difference_resilience_ratio.png'")
-    # plt.show()
+    plt.savefig('plot_gap_duration_difference_robustness_ratio.png', dpi=300)
+    print("Plot saved as 'plot_gap_duration_difference_robustness_ratio.png'")
 
 if __name__ == "__main__":
     main()

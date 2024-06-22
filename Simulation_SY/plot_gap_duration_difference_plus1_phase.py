@@ -116,12 +116,14 @@ def main():
         else:
             print(f"No durations found for satellite {satellite_num + 1}")
 
-    plt.figure(figsize=(15, 6))
-    plt.plot(satellite_numbers, weighted_avg_coverage_time_diff, marker='o', linestyle='-', color='skyblue')
-    plt.xlabel('Distance from Satellite 0 (km)')
-    plt.ylabel('Population-Weighted \n Average Coverage Time Difference \n (seconds)')
+    plt.figure(figsize=(10, 6))
+    plt.plot(satellite_numbers, weighted_avg_coverage_time_diff, marker='o', linestyle='-')
+    plt.xlabel('Distance from Original Satellite (km)')
+    plt.ylabel('Population-Weighted \n Average Coverage Time Difference (s)')
     plt.grid(True)
     
+    plt.tight_layout()
+    plt.subplots_adjust(top=0.95)
     plt.savefig("plot_gap_duration_difference_plus1_phase.png")
     print("Plot saved as 'plot_gap_duration_difference_plus1_phase.png'")
 

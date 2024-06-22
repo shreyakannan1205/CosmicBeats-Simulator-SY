@@ -116,20 +116,19 @@ def main():
 
     fig, ax = plt.subplots() 
     labels = satellite_counts
-    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
-    ax.set_xlabel('Total Number of Satellites \n Half Denies Service')
-    ax.set_ylabel('Population-Weighted \n Avg. Difference in Coverage \n (Seconds)')
+    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches, width = 0.5)
+    ax.set_xlabel('Total Number of Satellites \n (Half Denies Service)')
+    ax.set_ylabel('Population-Weighted \n Avg. Difference in Coverage (s)')
     # ax.set_title('Avg. Time Difference from Original Gaps')
-
+    plt.tight_layout() 
     for bar in bars:
         height = bar.get_height()
         formatted_label = format_seconds(height)
-        ax.text(bar.get_x() + bar.get_width() * 0.85, height, formatted_label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
+        ax.text(bar.get_x() + bar.get_width() * 0.85, height * 1.02, formatted_label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
 
     plt.xticks()
-    plt.tight_layout() 
-    plt.savefig('plot_gap_duration_difference_resilience_num.png', dpi=300) 
-    print("Plot saved as 'plot_gap_duration_difference_resilience_num.png'")
+    plt.savefig('plot_gap_duration_difference_robustness_num.png', dpi=300) 
+    print("Plot saved as 'plot_gap_duration_difference_robustness_num.png'")
     # plt.show()
 
 if __name__ == "__main__":

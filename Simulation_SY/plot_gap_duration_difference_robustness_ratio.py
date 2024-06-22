@@ -126,15 +126,16 @@ def main():
 
     fig, ax = plt.subplots()
     bars = ax.bar(new_labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
-    ax.set_ylabel('Population-Weighted \n Avg. Difference in Coverage \n (Seconds)')
-    ax.set_xlabel('Ratio Between Different Parties \n (Total: 1000 Satellites \n Largest Party Denies Service)')
+    ax.set_ylabel('Population-Weighted \n Avg. Difference in Coverage (s)')
+    ax.set_xlabel('Ratio Between Different Parties \n (Total 1000 Satellites, Largest Party Denies Service)')
 
     for bar, label in zip(bars, avg_labels):
         height = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width() * 0.85, height, label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
+        # ax.text(bar.get_x() + bar.get_width() * 0.85, height, label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
+    plt.subplots_adjust(top=0.95)
     plt.savefig('plot_gap_duration_difference_robustness_ratio.png', dpi=300)
     print("Plot saved as 'plot_gap_duration_difference_robustness_ratio.png'")
 

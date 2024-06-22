@@ -69,12 +69,17 @@ def main():
         print(f"Number of cities: {n}, Idle Percentage: {idle_percentage}")  
 
     # Plotting the data
-    plt.figure()
+    plt.figure(figsize = (10,6))
     plt.plot(num_cities, idle_percentages, marker='o')
     plt.xlabel('Number of Cities')
     plt.ylabel('Idle Time Percentage (%)')
     plt.grid(True)
     plt.xticks(range(1, max_cities + 1))
+
+    y_ticks = range(88, 101, 2)  # You can adjust this range as needed
+    y_labels = [str(tick) for tick in y_ticks]
+    plt.yticks(ticks=y_ticks, labels=y_labels)
+    plt.tight_layout()
     plt.savefig("plot_gap_analysis_numcity.png")
     print("Plot saved as plot_gap_analysis_numcity.png") 
 

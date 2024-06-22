@@ -63,7 +63,7 @@ sorted_data = sorted(data.items())
 for num_sat, (avg_total_gap_duration, largest_gap) in sorted_data:
     print(f"Number of Satellites: {num_sat}, Average Total Gap Duration: {avg_total_gap_duration:.2f} seconds, Largest Gap: {largest_gap:.2f} seconds")
 
-fig, ax1 = plt.subplots(figsize=(10,6))
+fig, ax1 = plt.subplots()
 avg_total_gaps = [item[1][0] for item in sorted_data]
 largest_gaps = [item[1][1] for item in sorted_data]
 
@@ -76,16 +76,16 @@ ax2 = ax1.twinx()
 rects2 = ax2.bar(index + bar_width/2, largest_gaps, bar_width, color='red', label='Largest Gap', hatch=plot_config.hatches[1], alpha=0.5)
 
 ax1.set_xlabel('Number of Satellites')
-ax1.set_ylabel('Average Total Gap Duration (seconds)', color='blue')
-ax2.set_ylabel('Largest Gap (seconds)', color='red')
+ax1.set_ylabel('Average Total Gap Duration (s)', color='blue')
+ax2.set_ylabel('Largest Gap (s)', color='red')
 ax1.set_xticks(index)
-ax1.set_xticklabels([item[0] for item in sorted_data])
+ax1.set_xticklabels([item[0] for item in sorted_data], rotation=45, ha='right')
 ax1.tick_params(axis='y', labelcolor='blue')
 ax2.tick_params(axis='y', labelcolor='red')
 
 fig.tight_layout()
-ax1.legend(loc='upper left')
-ax2.legend(loc='upper right')
+ax1.legend(loc='upper right', bbox_to_anchor=(1, 1))
+ax2.legend(loc='upper right',bbox_to_anchor=(1, 0.88))
 
 plt.savefig('plot_gap_analysis_numsat.png')
 print("Plot saved as 'plot_gap_analysis_numsat.png'")

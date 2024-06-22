@@ -126,10 +126,10 @@ def main():
             min_max_values.append((0, 0))
             print(f"No durations found for file prefix: {file_prefix}")
 
-    fig, ax = plt.subplots(figsize = (15,6))
+    fig, ax = plt.subplots()
     labels = [label for _, label in files_info]
-    ax.bar(labels, results, yerr=np.array(errors).T, capsize=5, color=colors, hatch=hatches)
-    ax.set_ylabel('Population-Weighted \n Average Coverage Difference \n (Seconds)')
+    ax.bar(labels, results, yerr=np.array(errors).T, capsize=5, color=colors, hatch=hatches, width = 0.7)
+    ax.set_ylabel('Population-Weighted \n Average Coverage Difference (s)')
     ax.set_xlabel('Base Number of Satellites (1, 100, 500)')
     # ax.set_title('Average Time Difference From Original Gaps')
 
@@ -138,9 +138,9 @@ def main():
         bar_height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width() / 2, bar_height + errors[i][1], f"Max: {format_seconds(max_val / (total_population / num_cities))}", ha='center', va='bottom', fontsize=annotation_fontsize)
         # ax.text(bar.get_x() + bar.get_width() / 2, bar_height - errors[i][0], f"Min: {format_seconds(min_val / total_population)}", ha='center', va='top', fontsize=annotation_fontsize)
-
-    plt.savefig('plot_gap_duration_difference_plus1_min_max_cities.png', dpi=300)
-    print("Plot saved as 'plot_gap_duration_difference_plus1_min_max_cities.png'")
+    plt.tight_layout()
+    plt.savefig('plot_gap_duration_difference_plus1.png', dpi=300)
+    print("Plot saved as 'plot_gap_duration_difference_plus1.png'")
 
 if __name__ == "__main__":
     main()

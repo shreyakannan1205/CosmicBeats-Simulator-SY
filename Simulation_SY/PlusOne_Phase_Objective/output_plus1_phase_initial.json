@@ -1,0 +1,935 @@
+
+{
+    "topologies":
+    [
+        {
+            "name": "ImagingSatConstellation",
+            "id": 0,
+            "nodes":
+            [
+    
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 1,
+                    "loglevel": "info",
+                    "tle_1": "1 54774U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  2", 
+                    "tle_2": "2 54774  53.2156 287.4860 0001364  80.1829  279.9317 15.08840119 724286",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 3,
+                    "loglevel": "info",
+                    "tle_1": "1 54775U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  3", 
+                    "tle_2": "2 54775  53.2156 287.4860 0001364  80.1829  294.9317 15.08840119 724284",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 5,
+                    "loglevel": "info",
+                    "tle_1": "1 54776U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  4", 
+                    "tle_2": "2 54776  53.2156 287.4860 0001364  80.1829  309.9317 15.08840119 724282",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 7,
+                    "loglevel": "info",
+                    "tle_1": "1 54777U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  5", 
+                    "tle_2": "2 54777  53.2156 287.4860 0001364  80.1829  324.9317 15.08840119 724280",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 9,
+                    "loglevel": "info",
+                    "tle_1": "1 54778U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  6", 
+                    "tle_2": "2 54778  53.2156 287.4860 0001364  80.1829  339.9317 15.08840119 724287",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 11,
+                    "loglevel": "info",
+                    "tle_1": "1 54779U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  7", 
+                    "tle_2": "2 54779  53.2156 287.4860 0001364  80.1829  354.9317 15.08840119 724285",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 13,
+                    "loglevel": "info",
+                    "tle_1": "1 54780U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  9", 
+                    "tle_2": "2 54780  53.2156 287.4860 0001364  80.1829    9.9317 15.08840119 724284",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 15,
+                    "loglevel": "info",
+                    "tle_1": "1 54781U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  0", 
+                    "tle_2": "2 54781  53.2156 287.4860 0001364  80.1829   24.9317 15.08840119 724282",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 17,
+                    "loglevel": "info",
+                    "tle_1": "1 54782U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  1", 
+                    "tle_2": "2 54782  53.2156 287.4860 0001364  80.1829   39.9317 15.08840119 724289",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 19,
+                    "loglevel": "info",
+                    "tle_1": "1 54783U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  2", 
+                    "tle_2": "2 54783  53.2156 287.4860 0001364  80.1829   54.9317 15.08840119 724287",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 21,
+                    "loglevel": "info",
+                    "tle_1": "1 54784U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  3", 
+                    "tle_2": "2 54784  53.2156 287.4860 0001364  80.1829   69.9317 15.08840119 724284",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 23,
+                    "loglevel": "info",
+                    "tle_1": "1 54785U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  4", 
+                    "tle_2": "2 54785  53.2156 287.4860 0001364  80.1829   84.9317 15.08840119 724282",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 25,
+                    "loglevel": "info",
+                    "tle_1": "1 54786U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  5", 
+                    "tle_2": "2 54786  53.2156 287.4860 0001364  80.1829   99.9317 15.08840119 724289",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 27,
+                    "loglevel": "info",
+                    "tle_1": "1 54787U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  6", 
+                    "tle_2": "2 54787  53.2156 287.4860 0001364  80.1829  114.9317 15.08840119 724288",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 29,
+                    "loglevel": "info",
+                    "tle_1": "1 54788U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  7", 
+                    "tle_2": "2 54788  53.2156 287.4860 0001364  80.1829  129.9317 15.08840119 724285",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 31,
+                    "loglevel": "info",
+                    "tle_1": "1 54789U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  8", 
+                    "tle_2": "2 54789  53.2156 287.4860 0001364  80.1829  144.9317 15.08840119 724283",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 33,
+                    "loglevel": "info",
+                    "tle_1": "1 54790U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  0", 
+                    "tle_2": "2 54790  53.2156 287.4860 0001364  80.1829  159.9317 15.08840119 724281",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 35,
+                    "loglevel": "info",
+                    "tle_1": "1 54791U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  1", 
+                    "tle_2": "2 54791  53.2156 287.4860 0001364  80.1829  174.9317 15.08840119 724289",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 37,
+                    "loglevel": "info",
+                    "tle_1": "1 54792U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  2", 
+                    "tle_2": "2 54792  53.2156 287.4860 0001364  80.1829  189.9317 15.08840119 724286",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 39,
+                    "loglevel": "info",
+                    "tle_1": "1 54793U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  3", 
+                    "tle_2": "2 54793  53.2156 287.4860 0001364  80.1829  204.9317 15.08840119 724285",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 41,
+                    "loglevel": "info",
+                    "tle_1": "1 54794U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  4", 
+                    "tle_2": "2 54794  53.2156 287.4860 0001364  80.1829  219.9317 15.08840119 724282",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 43,
+                    "loglevel": "info",
+                    "tle_1": "1 54795U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  5", 
+                    "tle_2": "2 54795  53.2156 287.4860 0001364  80.1829  234.9317 15.08840119 724280",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 45,
+                    "loglevel": "info",
+                    "tle_1": "1 54796U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  6", 
+                    "tle_2": "2 54796  53.2156 287.4860 0001364  80.1829  249.9317 15.08840119 724287",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 47,
+                    "loglevel": "info",
+                    "tle_1": "1 54797U 22175S   24100.52217282  .00001245  00000+0  96324-4 0  7", 
+                    "tle_2": "2 54797  53.2156 287.4860 0001364  80.1829  264.9317 15.08840119 724285",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "simplemodel"
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10001,
+                    "loglevel": "info",
+                    "latitude": 35.676400,
+                    "longitude": 139.650000,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10002,
+                    "loglevel": "info",
+                    "latitude": 28.704100,
+                    "longitude": 77.102500,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10003,
+                    "loglevel": "info",
+                    "latitude": 31.230400,
+                    "longitude": 121.473700,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10004,
+                    "loglevel": "info",
+                    "latitude": 23.804100,
+                    "longitude": 90.415200,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10005,
+                    "loglevel": "info",
+                    "latitude": -23.550500,
+                    "longitude": -46.633300,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10006,
+                    "loglevel": "info",
+                    "latitude": 30.044400,
+                    "longitude": 31.235700,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10007,
+                    "loglevel": "info",
+                    "latitude": 19.432600,
+                    "longitude": -99.133200,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10008,
+                    "loglevel": "info",
+                    "latitude": 40.712800,
+                    "longitude": -74.006000,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10009,
+                    "loglevel": "info",
+                    "latitude": 24.860700,
+                    "longitude": 67.001100,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10010,
+                    "loglevel": "info",
+                    "latitude": -4.303300,
+                    "longitude": 15.310500,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10011,
+                    "loglevel": "info",
+                    "latitude": 6.524400,
+                    "longitude": 3.379200,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10012,
+                    "loglevel": "info",
+                    "latitude": 41.008200,
+                    "longitude": 28.978400,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10013,
+                    "loglevel": "info",
+                    "latitude": -34.613200,
+                    "longitude": -58.377200,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10014,
+                    "loglevel": "info",
+                    "latitude": 14.599500,
+                    "longitude": 120.984200,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10015,
+                    "loglevel": "info",
+                    "latitude": 55.755800,
+                    "longitude": 37.617600,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10016,
+                    "loglevel": "info",
+                    "latitude": 4.711000,
+                    "longitude": -74.072100,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10017,
+                    "loglevel": "info",
+                    "latitude": -6.194400,
+                    "longitude": 106.822900,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10018,
+                    "loglevel": "info",
+                    "latitude": -12.046700,
+                    "longitude": -77.043100,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10019,
+                    "loglevel": "info",
+                    "latitude": 48.856600,
+                    "longitude": 2.352200,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10020,
+                    "loglevel": "info",
+                    "latitude": 13.756300,
+                    "longitude": 100.501800,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10021,
+                    "loglevel": "info",
+                    "latitude": -33.868800,
+                    "longitude": 151.209300,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        }
+                    ]
+                }
+                ]
+            }
+        ],
+        "simtime":
+        {
+            "starttime": "2024-04-09 12:00:00",
+            "endtime": "2024-04-16 12:00:00",
+            "delta": 1
+        },
+        "simlogsetup":
+        {
+            "loghandler": "LoggerFileChunkwise",
+            "logfolder": "imagingLogs",
+            "logchunksize": 1000000
+        }
+}
+    

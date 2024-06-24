@@ -10,8 +10,12 @@ def parse_passes(file_path):
             if line.startswith("Pass."):
                 parts = line.split(". ")
                 node_id = int(parts[1].split(": ")[1])
-                start_time_unix = float(parts[3].split(": ")[1])
-                end_time_unix = float(parts[4].split(": ")[1])
+                start_time_str = parts[3].split(": ")[1].strip()
+                end_time_str = parts[4].split(": ")[1].strip()
+                start_time = datetime.datetime.strptime(start_time_str, '%Y-%m-%d %H:%M:%S')
+                end_time = datetime.datetime.strptime(end_time_str, '%Y-%m-%d %H:%M:%S')
+                start_time_unix = start_time.timestamp()
+                end_time_unix = end_time.timestamp()
                 passes_by_node[node_id].append((start_time_unix, end_time_unix))
     return passes_by_node
 
@@ -27,7 +31,7 @@ def save_counts_to_file(passes_by_node, target_time):
     for node_id, passes in passes_by_node.items():
         output_file_path = f'satellite_counts_node_{node_id}.txt'
         with open(output_file_path, 'w') as output_file:
-            for i in range(86400):  # 24 hours * 3600 seconds
+            for i in range(604800):  # 24 hours * 3600 seconds
                 current_time = target_time + datetime.timedelta(seconds=i)
                 count = count_satellites_over_station(passes, current_time)
                 output_file.write(f"{current_time.strftime('%Y-%m-%d %H:%M:%S')} => count {count}\n")
@@ -51,8 +55,7 @@ def plot_counts(node_id, file_path):
     plt.grid(True)
     plt.tight_layout()
     plt.savefig(f'satellite_counts_node_{node_id}.png')
-    plt.show()
-
+    
 def main():
     parser = argparse.ArgumentParser(description='Count satellites over a ground station at a specific time.')
     parser.add_argument('file_path', type=str, help='Path to the input file')

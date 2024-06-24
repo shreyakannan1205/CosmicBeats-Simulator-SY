@@ -84,7 +84,7 @@ def get_ground_stations():
     ]
 
 def main():
-    directory = "PlusOne_Phase"
+    directory = "PlusOne_Phase_24"
     ground_stations = get_ground_stations()
 
     satellite_numbers = []
@@ -124,8 +124,8 @@ def main():
     
     plt.tight_layout()
     plt.subplots_adjust(top=0.95)
-    plt.savefig("plot_gap_duration_difference_plus1_phase.png")
-    print("Plot saved as 'plot_gap_duration_difference_plus1_phase.png'")
+    plt.savefig("plot_gap_duration_difference_plus1_phase_24.png")
+    print("Plot saved as 'plot_gap_duration_difference_plus1_phase_24.png'")
 
 if __name__ == "__main__":
     main()

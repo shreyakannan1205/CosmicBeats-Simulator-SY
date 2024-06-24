@@ -15,13 +15,13 @@ base_tle_2 = "2 {catalog_number:05d}  53.2156 287.4860 0001364  80.1829  {mean_a
 initial_mean_anomaly = 279.9317
 
 # Number of satellites (12 including the original one)
-num_satellites = 12
+num_satellites = 24
 
 # Generate TLEs
 tles = []
 
 for i in range(num_satellites):
-    mean_anomaly = (initial_mean_anomaly + i * 30) % 360
+    mean_anomaly = (initial_mean_anomaly + i * 15) % 360
     catalog_number = 54774 + i 
     
     tle_1 = base_tle_1.format(catalog_number=catalog_number)
@@ -35,10 +35,10 @@ for i in range(num_satellites):
     
     tles.append((f"Satellite_{i+1}", tle_1, tle_2))
 
-with open('original_12.tle', 'w') as file:
+with open('original_24.tle', 'w') as file:
     for tle in tles:
         file.write(tle[0] + '\n')
         file.write(tle[1] + '\n')
         file.write(tle[2] + '\n')
 
-print("TLEs have been saved to original_12.tle")
+print("TLEs have been saved to original_24.tle")

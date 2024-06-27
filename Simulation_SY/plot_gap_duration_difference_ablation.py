@@ -121,13 +121,10 @@ def main():
     labels = [label for _, label in files_info]
     bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches, width = 0.5)
     ax.set_xlabel('Type of Satellite Added')
-    ax.set_ylabel('Difference in Coverage \n (min)')
+    ax.set_ylabel('Additional Coverage \n (min)')
     # ax.set_title('Average Time Difference From Original Gaps')
+    ax.set_ylim(0, 80)
 
-    for bar in bars:
-        height = bar.get_height()
-        formatted_label = format_minutes(height)
-        # ax.text(bar.get_x() + bar.get_width() * 0.9, height, formatted_label, ha='center', va='bottom', fontsize=annotation_fontsize)
     plt.tight_layout()
     plt.savefig('plot_gap_duration_difference_ablation.png', dpi=300)
     print("Plot saved as 'plot_gap_duration_difference_ablation.png'")

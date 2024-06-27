@@ -112,7 +112,7 @@ def main():
     plt.figure(figsize=(10, 6))
     plt.plot(satellite_numbers, weighted_avg_coverage_time_diff, marker='o', linestyle='-')
     plt.xlabel('Distance from Original Satellite (km)')
-    plt.ylabel('Difference in Coverage \n (min)')
+    plt.ylabel('Additional Coverage \n (min)')
     plt.grid(True)
     
     plt.tight_layout()

@@ -117,10 +117,17 @@ def main():
 
     new_labels = [f"{label.split('_')[0]}:1..:1" for label in labels]
 
-    fig, ax = plt.subplots(figsize = (10,7))
+    fig, ax = plt.subplots()
     bars = ax.bar(new_labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
-    ax.set_ylabel('Difference in Coverage \n (min)')
+    ax.set_ylabel('Reduced Coverage \n (min)')
     ax.set_xlabel('Ratio Between Different Parties')
+    ax.set_ylim(0, 700)
+
+    for bar in bars:
+        height = bar.get_height()
+        percentage = (height / 10080) * 100 
+        formatted_label = f"{percentage:.2f}%"
+        ax.text(bar.get_x() + bar.get_width() * 0.5, height * 1.02, formatted_label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()

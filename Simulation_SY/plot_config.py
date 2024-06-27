@@ -13,7 +13,7 @@ figsize = (10, 6)
 tick_size = 25
 legend_size = 20
 alpha = 0.1
-annotation_fontsize = 15
+annotation_fontsize = 20
 
 plt.rcParams['axes.labelsize'] = xyfontsize
 plt.rcParams['xtick.labelsize'] = tick_size

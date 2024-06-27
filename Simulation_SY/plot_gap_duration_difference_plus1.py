@@ -46,6 +46,12 @@ def analyze_file_shorter(folder_path, filename, population):
 
     return durations
 
+def format_duration(seconds):
+    hours = int(seconds // 3600)
+    minutes = int((seconds % 3600) // 60)
+    seconds = int(seconds % 60)
+    return f"{hours:02}:{minutes:02}:{seconds:02}"
+
 def format_minutes(minutes):
     hours = int(minutes // 60)
     minutes = int(minutes % 60)
@@ -87,9 +93,10 @@ def main():
 
     results = []
     errors = []
+    min_max_values = []
     colors = plot_config.experiment_colors[:len(files_info)]
     hatches = plot_config.hatches[:len(files_info)]
-    annotation_fontsize = plot_config.annotation_fontsize
+    annotation_fontsize = 24
 
     total_population = sum(population for _, population in ground_stations)
     num_cities = len(ground_stations)
@@ -105,30 +112,35 @@ def main():
         if total_durations:
             num_durations = len(total_durations)
             population_weighted_avg_diff = sum(total_durations) / (total_population * num_durations / num_cities)
-            std_deviation = np.std(total_durations) / total_population
+            min_difference = np.min(total_durations)
+            max_difference = np.max(total_durations)
             results.append(population_weighted_avg_diff)
-            errors.append(std_deviation)
-            print(f"Results for {label}: Avg={population_weighted_avg_diff}, Std Dev={std_deviation}")
+            errors.append([abs(population_weighted_avg_diff - min_difference / (total_population / num_cities)), 
+                           abs(max_difference / (total_population / num_cities) - population_weighted_avg_diff)])
+            min_max_values.append((min_difference, max_difference))
+            print(f"Results for {label}: Avg={population_weighted_avg_diff}, Min={min_difference}, Max={max_difference}")
         else:
             results.append(0)
-            errors.append(0)
+            errors.append([0, 0])
+            min_max_values.append((0, 0))
             print(f"No durations found for file prefix: {file_prefix}")
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10,6))
     labels = [label for _, label in files_info]
-    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches, width = 0.5)
-    ax.set_ylabel('Difference in Coverage \n (min)')
-    ax.set_xlabel('Base Number of Satellites (1, 100, 500)')
-    # ax.set_title('Average Time Difference From Original Gaps')
+    ax.bar(labels, results, yerr=np.array(errors).T, capsize=5, color=colors, hatch=hatches, width = 0.7)
+    ax.set_ylabel('Range of \n Coverage Increase \n (min)')
+    ax.set_xlabel('Base Number of Satellites + 1')
+    ax.set_ylim(0, 300) 
 
-    for bar in bars:
-        height = bar.get_height()
-        formatted_label = format_minutes(height)
-        # ax.text(bar.get_x() + bar.get_width() / 2, height + errors[bars.index(bar)], formatted_label, ha='center', va='bottom', fontsize=annotation_fontsize)
-
+    for i, (min_val, max_val) in enumerate(min_max_values):
+        bar = ax.patches[i]
+        bar_height = bar.get_height()
+        max_val_seconds = max_val / (total_population / num_cities) * 60 
+        formatted_label = f"Max: {format_duration(max_val_seconds)}"
+        ax.text(bar.get_x() + bar.get_width() / 2, bar_height + errors[i][1], formatted_label, ha='center', va='bottom', fontsize=annotation_fontsize)
+    
     plt.tight_layout()
     plt.savefig('plot_gap_duration_difference_plus1.png', dpi=300)
-    plt.show()
     print("Plot saved as 'plot_gap_duration_difference_plus1.png'")
 
 if __name__ == "__main__":

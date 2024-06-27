@@ -60,7 +60,6 @@ def main():
             file_index = 10000 + i
             file_path = os.path.join(directory, f"output_numcity_{n}_gap_duration_analysis_{file_index}.txt")
             average_gap_duration = parse_gap_duration(file_path)
-            # print(f"Average gap duration for {file_path}: {average_gap_duration}")  
             total_gap_duration += average_gap_duration
         
         idle_percentage = calculate_idle_percentage(total_gap_duration, n, total_duration)
@@ -69,14 +68,14 @@ def main():
         print(f"Number of cities: {n}, Idle Percentage: {idle_percentage}")  
 
     # Plotting the data
-    plt.figure(figsize = (11,7))
+    plt.figure(figsize = (10,6.1))
     plt.plot(num_cities, idle_percentages, marker='o')
     plt.xlabel('Number of Cities')
     plt.ylabel('Idle Time Percentage (%)')
     plt.grid(True)
-    plt.xticks(range(1, max_cities + 1))
+    plt.xticks(range(1, max_cities + 1), fontsize = 22)
 
-    y_ticks = range(88, 101, 2)  # You can adjust this range as needed
+    y_ticks = range(88, 101, 2) 
     y_labels = [str(tick) for tick in y_ticks]
     plt.yticks(ticks=y_ticks, labels=y_labels)
     plt.tight_layout()

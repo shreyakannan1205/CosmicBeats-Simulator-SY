@@ -46,17 +46,9 @@ def analyze_file_longer(folder_path, filename, population):
 
     return durations
 
-def format_seconds(seconds):
-    days = int(seconds // (24 * 3600))
-    seconds %= (24 * 3600)
-    hours = int(seconds // 3600)
-    seconds %= 3600
-    minutes = int(seconds // 60)
-    seconds = int(seconds % 60)
-    if days > 0:
-        return f"{days} days, {hours:02}:{minutes:02}:{seconds:02}"
-    else:
-        return f"{hours:02}:{minutes:02}:{seconds:02}"
+def format_percentage(value, total_time_seconds):
+    percentage = (value / total_time_seconds) * 100
+    return f"{percentage:.2f}%"
 
 def get_ground_stations():
     return [
@@ -88,9 +80,9 @@ def main():
     satellite_counts = ['200', '500', '1000', '2000']
 
     ground_stations = get_ground_stations()
+    total_time_seconds = 7 * 24 * 60 * 60  # Total time is 1 week in seconds
 
     results = []
-    errors = []
     colors = plot_config.experiment_colors[:len(satellite_counts)]
     hatches = plot_config.hatches[:len(satellite_counts)]
 
@@ -106,28 +98,22 @@ def main():
         if total_durations:
             num_durations = len(total_durations)
             population_weighted_avg_diff = sum(total_durations) / (total_population * num_durations / len(ground_stations))
-            std_deviation = np.std(total_durations) / total_population
-            results.append(population_weighted_avg_diff)
-            errors.append(std_deviation)
+            population_weighted_avg_diff_percentage = (population_weighted_avg_diff / total_time_seconds) * 100
+            results.append(population_weighted_avg_diff_percentage)
+            print(f"Results for {count} satellites: Avg={population_weighted_avg_diff_percentage}%")
         else:
             results.append(0)
-            errors.append(0)
             print(f"No durations found for satellite count {count}")
 
-    fig, ax = plt.subplots() 
+    fig, ax = plt.subplots()
     labels = satellite_counts
-    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches, width = 0.5)
+    bars = ax.bar(labels, results, color=colors, hatch=hatches, width = 0.5)
     ax.set_xlabel('Total Number of Satellites \n (Half Denies Service)')
-    ax.set_ylabel('Population-Weighted \n Avg. Difference in Coverage (s)')
-    # ax.set_title('Avg. Time Difference from Original Gaps')
-    plt.tight_layout() 
-    for bar in bars:
-        height = bar.get_height()
-        formatted_label = format_seconds(height)
-        ax.text(bar.get_x() + bar.get_width() * 0.85, height * 1.02, formatted_label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
-
+    ax.set_ylabel('Difference in Coverage \n (%)')
+    plt.tight_layout()
+    
     plt.xticks()
-    plt.savefig('plot_gap_duration_difference_robustness_num.png', dpi=300) 
+    plt.savefig('plot_gap_duration_difference_robustness_num.png', dpi=300)
     print("Plot saved as 'plot_gap_duration_difference_robustness_num.png'")
     # plt.show()
 

@@ -8,9 +8,9 @@ matplotlib.rcParams['font.family'] = 'serif'
 matplotlib.rcParams['font.sans-serif'] = ['Times New Roman']
 
 linewidth = 3
-xyfontsize = 20
+xyfontsize = 30
 figsize = (10, 6)
-tick_size = 18
+tick_size = 25
 legend_size = 20
 alpha = 0.1
 annotation_fontsize = 15

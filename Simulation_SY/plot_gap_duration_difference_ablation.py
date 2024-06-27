@@ -41,22 +41,15 @@ def analyze_file_shorter(folder_path, filename, population):
                     print(f"Error: Found a duration longer than the original duration in file {filename}: {duration}")
                     continue
                 difference = original_duration - duration
-                weighted_difference = difference.total_seconds() * population
+                weighted_difference = difference.total_seconds() * population / 60  # Convert to minutes
                 durations.append(weighted_difference)
 
     return durations
 
-def format_seconds(seconds):
-    days = int(seconds // (24 * 3600))
-    seconds %= (24 * 3600)
-    hours = int(seconds // 3600)
-    seconds %= 3600
-    minutes = int(seconds // 60)
-    seconds = int(seconds % 60)
-    if days > 0:
-        return f"{days} days, {hours:02}:{minutes:02}:{seconds:02}"
-    else:
-        return f"{hours:02}:{minutes:02}:{seconds:02}"
+def format_minutes(minutes):
+    hours = int(minutes // 60)
+    minutes = int(minutes % 60)
+    return f"{hours} hours, {minutes} minutes" if hours > 0 else f"{minutes} minutes"
 
 def get_ground_stations():
     return [
@@ -87,9 +80,9 @@ def main():
     ground_stations = get_ground_stations()
 
     files_info = [
-        ('diffheight', "Different Height"),
-        ('diffinclination', "Different Inclination"),
-        ('diffphase', "Different Phase")
+        ('diffheight', "Diff. Height"),
+        ('diffinclination', "Diff. Inclination"),
+        ('diffphase', "Diff. Phase")
     ]
 
     results = []
@@ -126,15 +119,15 @@ def main():
 
     fig, ax = plt.subplots()
     labels = [label for _, label in files_info]
-    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches, width = 0.4)
+    bars = ax.bar(labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches, width = 0.5)
     ax.set_xlabel('Type of Satellite Added')
-    ax.set_ylabel('Population-Weighted \n Average Coverage Difference (s)')
+    ax.set_ylabel('Difference in Coverage \n (min)')
     # ax.set_title('Average Time Difference From Original Gaps')
 
     for bar in bars:
         height = bar.get_height()
-        formatted_label = format_seconds(height)
-        ax.text(bar.get_x() + bar.get_width() * 0.9, height, formatted_label, ha='center', va='bottom', fontsize=annotation_fontsize)
+        formatted_label = format_minutes(height)
+        # ax.text(bar.get_x() + bar.get_width() * 0.9, height, formatted_label, ha='center', va='bottom', fontsize=annotation_fontsize)
     plt.tight_layout()
     plt.savefig('plot_gap_duration_difference_ablation.png', dpi=300)
     print("Plot saved as 'plot_gap_duration_difference_ablation.png'")

@@ -36,7 +36,7 @@ def find_largest_gap(source_file, target_file):
 
 repetitions = int(input("Enter the number of repetitions: "))
 
-folder_name = "NumSat"
+folder_name = "NumSat_Taipei"
 os.makedirs(folder_name, exist_ok=True)
 
 numbers = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 3000]
@@ -53,7 +53,7 @@ for num in numbers:
         output_gaps_report_txt = os.path.join(folder_name, f"output_{num}_random_gaps_report_10001.txt")
 
         command1 = f"python3 change_tle.py starlink_original.tle {input_tle} {num}"
-        command2 = f"python3 create_config_v2.py {input_tle} gs_ny.txt '2024-04-09 12:00:00' '2024-04-16 12:00:00' '1' {output_json}"
+        command2 = f"python3 create_config_v2.py {input_tle} gs_tp.txt '2024-04-09 12:00:00' '2024-04-16 12:00:00' '1' {output_json}"
         command3 = f"python3 imagesatellite.py {output_json} > {output_txt}"
         command4 = f"python3 correct_lines_in_txt.py {output_txt}"
         command5 = f"python3 output_examine_v2.py {output_txt} '2024-04-09 12:00:00' '2024-04-16 12:00:00'"

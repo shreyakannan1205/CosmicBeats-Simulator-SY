@@ -40,19 +40,21 @@ def parse_duration(duration_str):
         h, m, s = map(float, duration_str.split(':'))
         return timedelta(hours=h, minutes=m, seconds=int(s), microseconds=int((s - int(s)) * 1e6))
 
-folder_path = "NumSat"
+folder_path = "NumSat_Taipei"
 gap_duration_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.startswith('output_') and f.endswith('_random_gap_duration_analysis_10001.txt')]
 largest_gap_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.startswith('total_gap_duration_analysis_') and f.endswith('.txt')]
 
 data = {}
+total_time_seconds = 7 * 24 * 60 * 60  # One week in seconds
+
 for file_path in gap_duration_files:
     num_satellites = int(re.search(r"output_(\d+)_random_gap_duration_analysis_10001.txt", file_path).group(1))
-    avg_total_gap_duration = parse_gap_duration_file(file_path)
+    avg_total_gap_duration = parse_gap_duration_file(file_path) / total_time_seconds * 100  # Convert to percentage
     data[num_satellites] = [avg_total_gap_duration, 0]
 
 for file_path in largest_gap_files:
     num_satellites = int(re.search(r"total_gap_duration_analysis_(\d+).txt", file_path).group(1))
-    largest_gap = parse_largest_gap_file(file_path)
+    largest_gap = parse_largest_gap_file(file_path) / 60  # Convert to minutes
     if num_satellites in data:
         data[num_satellites][1] = largest_gap
     else:
@@ -61,7 +63,7 @@ for file_path in largest_gap_files:
 sorted_data = sorted(data.items())
 
 for num_sat, (avg_total_gap_duration, largest_gap) in sorted_data:
-    print(f"Number of Satellites: {num_sat}, Average Total Gap Duration: {avg_total_gap_duration:.2f} seconds, Largest Gap: {largest_gap:.2f} seconds")
+    print(f"Number of Satellites: {num_sat}, Average Total Gap Duration: {avg_total_gap_duration:.2f} %, Largest Gap: {largest_gap:.2f} minutes")
 
 fig, ax1 = plt.subplots()
 avg_total_gaps = [item[1][0] for item in sorted_data]
@@ -70,14 +72,14 @@ largest_gaps = [item[1][1] for item in sorted_data]
 bar_width = 0.35
 index = np.arange(len(sorted_data))
 
-rects1 = ax1.bar(index - bar_width/2, avg_total_gaps, bar_width, color='blue', label='Average Total Gap Duration', hatch=plot_config.hatches[0], alpha=0.7)
+rects1 = ax1.bar(index - bar_width/2, avg_total_gaps, bar_width, color='blue', label='Gap Duration', hatch=plot_config.hatches[0], alpha=0.7)
 
 ax2 = ax1.twinx()
 rects2 = ax2.bar(index + bar_width/2, largest_gaps, bar_width, color='red', label='Largest Gap', hatch=plot_config.hatches[1], alpha=0.5)
 
 ax1.set_xlabel('Number of Satellites')
-ax1.set_ylabel('Average Total Gap Duration (s)', color='blue')
-ax2.set_ylabel('Largest Gap (s)', color='red')
+ax1.set_ylabel('Gap Duration (%)', color='blue')
+ax2.set_ylabel('Largest Gap (min)', color='red')
 ax1.set_xticks(index)
 ax1.set_xticklabels([item[0] for item in sorted_data], rotation=45, ha='right')
 ax1.tick_params(axis='y', labelcolor='blue')
@@ -87,5 +89,5 @@ fig.tight_layout()
 ax1.legend(loc='upper right', bbox_to_anchor=(1, 1))
 ax2.legend(loc='upper right',bbox_to_anchor=(1, 0.88))
 
-plt.savefig('plot_gap_analysis_numsat.png')
-print("Plot saved as 'plot_gap_analysis_numsat.png'")
+plt.savefig('plot_gap_analysis_numsat_percentage.png')
+print("Plot saved as 'plot_gap_analysis_numsat_percentage.png'")

@@ -69,7 +69,7 @@ def main():
         print(f"Number of cities: {n}, Idle Percentage: {idle_percentage}")  
 
     # Plotting the data
-    plt.figure(figsize = (10,6))
+    plt.figure(figsize = (11,7))
     plt.plot(num_cities, idle_percentages, marker='o')
     plt.xlabel('Number of Cities')
     plt.ylabel('Idle Time Percentage (%)')

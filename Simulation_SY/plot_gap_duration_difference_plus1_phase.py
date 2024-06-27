@@ -41,22 +41,15 @@ def analyze_file_shorter(folder_path, filename, population):
                     print(f"Error: Found a duration longer than the original duration in file {filename}: {duration}")
                     continue
                 difference = original_duration - duration
-                weighted_difference = difference.total_seconds() * population
+                weighted_difference = difference.total_seconds() * population / 60  # Convert to minutes
                 durations.append(weighted_difference)
 
     return durations
 
-def format_seconds(seconds):
-    days = int(seconds // (24 * 3600))
-    seconds %= (24 * 3600)
-    hours = int(seconds // 3600)
-    seconds %= 3600
-    minutes = int(seconds // 60)
-    seconds = int(seconds % 60)
-    if days > 0:
-        return f"{days} days, {hours:02}:{minutes:02}:{seconds:02}"
-    else:
-        return f"{hours:02}:{minutes:02}:{seconds:02}"
+def format_minutes(minutes):
+    hours = int(minutes // 60)
+    minutes = int(minutes % 60)
+    return f"{hours} hours, {minutes} minutes" if hours > 0 else f"{minutes} minutes"
 
 def get_ground_stations():
     return [
@@ -84,7 +77,7 @@ def get_ground_stations():
     ]
 
 def main():
-    directory = "PlusOne_Phase_24"
+    directory = "PlusOne_Phase"
     ground_stations = get_ground_stations()
 
     satellite_numbers = []
@@ -119,13 +112,13 @@ def main():
     plt.figure(figsize=(10, 6))
     plt.plot(satellite_numbers, weighted_avg_coverage_time_diff, marker='o', linestyle='-')
     plt.xlabel('Distance from Original Satellite (km)')
-    plt.ylabel('Population-Weighted \n Average Coverage Time Difference (s)')
+    plt.ylabel('Difference in Coverage \n (min)')
     plt.grid(True)
     
     plt.tight_layout()
     plt.subplots_adjust(top=0.95)
-    plt.savefig("plot_gap_duration_difference_plus1_phase_24.png")
-    print("Plot saved as 'plot_gap_duration_difference_plus1_phase_24.png'")
+    plt.savefig("plot_gap_duration_difference_plus1_phase.png")
+    print("Plot saved as 'plot_gap_duration_difference_plus1_phase.png'")
 
 if __name__ == "__main__":
     main()

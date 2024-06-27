@@ -30,22 +30,15 @@ def analyze_file_longer_ratio(folder_path, filename, original_duration, populati
                     print(f"Error: Found a duration shorter than the original duration in file {filename}: {duration}")
                     continue
                 difference = duration - original_duration
-                weighted_difference = difference.total_seconds() * population
+                weighted_difference = difference.total_seconds() * population / 60  # Convert to minutes
                 durations.append(weighted_difference)
 
     return durations
 
-def format_seconds(seconds):
-    days = int(seconds // (24 * 3600))
-    seconds %= (24 * 3600)
-    hours = int(seconds // 3600)
-    seconds %= 3600
-    minutes = int(seconds // 60)
-    seconds = int(seconds % 60)
-    if days > 0:
-        return f"{days} days, {hours:02}:{minutes:02}:{seconds:02}"
-    else:
-        return f"{hours:02}:{minutes:02}:{seconds:02}"
+def format_minutes(minutes):
+    hours = int(minutes // 60)
+    minutes = int(minutes % 60)
+    return f"{hours} hours, {minutes} minutes" if hours > 0 else f"{minutes} minutes"
 
 def get_ground_stations():
     return [
@@ -115,23 +108,19 @@ def main():
             std_deviation = np.std(total_durations) / total_population
             results.append(population_weighted_avg_diff)
             errors.append(std_deviation)
-            avg_labels.append(format_seconds(population_weighted_avg_diff))
+            avg_labels.append(format_minutes(population_weighted_avg_diff))
         else:
             results.append(0)
             errors.append(0)
-            avg_labels.append("0:00:00")
+            avg_labels.append("0 minutes")
             print(f"No durations found for satellite ratio {label}")
 
     new_labels = [f"{label.split('_')[0]}:1..:1" for label in labels]
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize = (10,7))
     bars = ax.bar(new_labels, results, yerr=errors, capsize=5, color=colors, hatch=hatches)
-    ax.set_ylabel('Population-Weighted \n Avg. Difference in Coverage (s)')
-    ax.set_xlabel('Ratio Between Different Parties \n (Total 1000 Satellites, Largest Party Denies Service)')
-
-    for bar, label in zip(bars, avg_labels):
-        height = bar.get_height()
-        # ax.text(bar.get_x() + bar.get_width() * 0.85, height, label, ha='center', va='bottom', fontsize=plot_config.annotation_fontsize)
+    ax.set_ylabel('Difference in Coverage \n (min)')
+    ax.set_xlabel('Ratio Between Different Parties')
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()

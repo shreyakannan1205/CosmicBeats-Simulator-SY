@@ -1,3 +1,0 @@
-Largest Gap of 0:01:29.254233 found between 2024-04-16 06:46:07 and 2024-04-16 06:47:37
-Largest Gap of 0:00:14.499941 found between 2024-04-11 00:32:00 and 2024-04-11 00:32:15
-Largest Gap of 0:00:19.010720 found between 2024-04-16 01:10:12 and 2024-04-16 01:10:31

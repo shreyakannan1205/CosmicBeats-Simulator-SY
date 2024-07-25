@@ -36,7 +36,7 @@ def find_largest_gap(source_file, target_file):
 
 repetitions = int(input("Enter the number of repetitions: "))
 
-folder_name = "NumSat_Taipei"
+folder_name = "NumSat_Debug"
 os.makedirs(folder_name, exist_ok=True)
 
 numbers = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 3000]

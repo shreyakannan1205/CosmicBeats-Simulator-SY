@@ -2,10 +2,9 @@ import pandas as pd
 from datetime import datetime, timedelta
 import sys
 
-# Redirect stdout to a file
-original_stdout = sys.stdout  # Save a reference to the original standard output
+original_stdout = sys.stdout 
 with open('objective_function_log.txt', 'w') as f:
-    sys.stdout = f  # Change the standard output to the file we created.
+    sys.stdout = f  
 
     # Population data for each ground station
     population_data = {
@@ -76,29 +75,25 @@ with open('objective_function_log.txt', 'w') as f:
             
             # Sum population / (number of satellites + 1) for each second in the duration
             for second in range(duration):
-                current_time = start_time + timedelta(seconds=second)  # Generate each specific second
-                if current_time in satellite_counts:  # Check if current_time is in satellite_counts
+                current_time = start_time + timedelta(seconds=second) 
+                if current_time in satellite_counts: 
                     num_satellites = satellite_counts[current_time]
-                    score = population / (num_satellites + 1)  # Include the satellite itself
+                    score = population / (num_satellites + 1) 
                     total_score += score
                     print(f"  Time: {current_time}, Satellite Count: {num_satellites}, Score: {score}")
         
         print(f"Total Score for {passes_file}: {total_score}")
         return total_score
 
-    # File paths for multiple passes files
     passes_files = [f'PlusOne_Phase_Objective/output_plus1_phase_{i}_sorted.txt' for i in range(1, 15)]
 
-    # Calculate objective function for each passes file
     all_scores = []
     for passes_file in passes_files:
         score = calculate_objective_function(passes_file, population_data)
         all_scores.append((passes_file, score))
 
-    # Print all objective function scores
     print("All Objective Function Scores:")
     for passes_file, score in all_scores:
         print(f"{passes_file}: {score}")
 
-    # Reset stdout to the original standard output
     sys.stdout = original_stdout

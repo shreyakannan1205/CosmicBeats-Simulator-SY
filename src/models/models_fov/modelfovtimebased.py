@@ -161,8 +161,8 @@ class ModelFovTimeBased(IModel):
         _otherNodeType = str(_otherNode.nodeType.value)
         _startTimeUnix = _startTime.to_unix()
         _endTimeUnix = _endTime.to_unix()
-        
-        _loggerStr = "".join(["Pass. nodeID: ", str(_otherNode.nodeID), ". nodeType: ", _otherNodeType, ". startTimeUnix: ", str(_startTimeUnix), ". endTimeUnix: ", str(_endTimeUnix)])
+        # Mutex lock 
+        _loggerStr = "".join(["Pass. nodeID: ", str(_otherNode.nodeID), ". nodeType: ", _otherNodeType, ". satID: ", str(self.__ownernode.nodeID), ". startTimeUnix: ", str(_startTimeUnix), ". endTimeUnix: ", str(_endTimeUnix)])
         self.__logger.write_Log(_loggerStr, ELogType.LOGINFO, self.__ownernode.timestamp, self.iName)
         print(_loggerStr)
             

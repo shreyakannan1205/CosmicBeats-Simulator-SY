@@ -1,0 +1,3925 @@
+
+{
+    "topologies":
+    [
+        {
+            "name": "ImagingSatConstellation",
+            "id": 0,
+            "nodes":
+            [
+    
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 1,
+                    "loglevel": "info",
+                    "tle_1": "1 48140U 21027BA  24100.89470320  .00001805  00000+0  14006-3 0  9996", 
+                    "tle_2": "2 48140  53.0553  69.1775 0001449  92.7761 267.3394 15.06402618167084",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 3,
+                    "loglevel": "info",
+                    "tle_1": "1 57621U 23119V   24101.54915316  .00002831  00000+0  22442-3 0  9999", 
+                    "tle_2": "2 57621  43.0035 275.4397 0001267 272.3465  87.7232 15.02554289 38056",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 5,
+                    "loglevel": "info",
+                    "tle_1": "1 47404U 21005BH  24100.78959856  .00001902  00000+0  14662-3 0  9994", 
+                    "tle_2": "2 47404  53.0557 289.0991 0001348  90.2317 269.8827 15.06384581178124",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 7,
+                    "loglevel": "info",
+                    "tle_1": "1 45783U 20038BF  24101.20747489  .00001286  00000+0  10520-3 0  9996", 
+                    "tle_2": "2 45783  53.0546  92.2212 0001378  89.7229 270.3918 15.06400192212403",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 9,
+                    "loglevel": "info",
+                    "tle_1": "1 54811U 22175BF  24101.22101346 -.00001078  00000+0 -49667-4 0  9996", 
+                    "tle_2": "2 54811  53.2193 279.7113 0001275  86.9718 273.1420 15.08832120 72590",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 11,
+                    "loglevel": "info",
+                    "tle_1": "1 56804U 23078AP  24101.23603061 -.00000520  00000+0 -35762-4 0  9997", 
+                    "tle_2": "2 56804  69.9980 285.4327 0002975 270.5355  89.5464 14.98327526 48811",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 13,
+                    "loglevel": "info",
+                    "tle_1": "1 47639U 21012V   24101.30376190  .00002093  00000+0  15932-3 0  9998", 
+                    "tle_2": "2 47639  53.0547 306.7914 0001822  87.9499 272.1699 15.06412056174484",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 15,
+                    "loglevel": "info",
+                    "tle_1": "1 52341U 22045L   24101.19012970 -.00000082  00000+0  12932-4 0  9996", 
+                    "tle_2": "2 52341  53.2174 104.7594 0001333  94.3213 265.7932 15.08834110110198",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 17,
+                    "loglevel": "info",
+                    "tle_1": "1 57067U 23088V   24100.86935923  .00001576  00000+0  13175-3 0  9996", 
+                    "tle_2": "2 57067  43.0048 304.2682 0001530 268.3481  91.7186 15.02535909 44359",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 19,
+                    "loglevel": "info",
+                    "tle_1": "1 53222U 22084AK  24100.88650817  .00000123  00000+0  14141-4 0  9990", 
+                    "tle_2": "2 53222  97.6550 162.6927 0000574 102.8014 257.3275 15.01257404 94859",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 21,
+                    "loglevel": "info",
+                    "tle_1": "1 53865U 22114AZ  24101.24759920  .00002032  00000+0  14565-3 0  9993", 
+                    "tle_2": "2 53865  53.2175 179.3484 0001412  87.2804 272.8350 15.08851039 87131",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 23,
+                    "loglevel": "info",
+                    "tle_1": "1 54187U 22141AG  24100.74713177  .00000204  00000+0  30941-4 0  9995", 
+                    "tle_2": "2 54187  53.2191 261.6222 0001847 103.0719 257.0479 15.08834008 80346",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 25,
+                    "loglevel": "info",
+                    "tle_1": "1 54797U 22175AR  24101.27064627 -.00002287  00000+0 -12559-3 0  9996", 
+                    "tle_2": "2 54797  53.2169 299.2861 0001897  83.4261 276.6947 15.08853166 72324",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 27,
+                    "loglevel": "info",
+                    "tle_1": "1 47138U 20088S   24101.42314440  .00012486  00000+0  85534-3 0  9999", 
+                    "tle_2": "2 47138  53.0567 191.5770 0001779  97.6833 262.4358 15.06411916186965",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 29,
+                    "loglevel": "info",
+                    "tle_1": "1 55467U 23015U   24101.46965306  .00001547  00000+0  12961-3 0  9993", 
+                    "tle_2": "2 55467  43.0036 159.9159 0001223 264.4086  95.6616 15.02520070 65727",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 31,
+                    "loglevel": "info",
+                    "tle_1": "1 56342U 23058AB  24100.72697757  .00000176  00000+0  18336-4 0  9993", 
+                    "tle_2": "2 56342  97.6542 102.5485 0002179  94.4561 265.6912 15.01256875 53265",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 33,
+                    "loglevel": "info",
+                    "tle_1": "1 47174U 20088BE  24101.55348583  .00011529  00000+0  79095-3 0  9990", 
+                    "tle_2": "2 47174  53.0541 195.6723 0001340  95.4326 264.6816 15.06432150186907",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 35,
+                    "loglevel": "info",
+                    "tle_1": "1 58130U 23162N   24100.94636654  .00001103  00000+0  96713-4 0  9995", 
+                    "tle_2": "2 58130  43.0037 329.6222 0001363 271.6291  88.4395 15.02541388 27196",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 37,
+                    "loglevel": "info",
+                    "tle_1": "1 45096U 20006BE  24101.49775043  .00003528  00000+0  25556-3 0  9992", 
+                    "tle_2": "2 45096  53.0523 140.9190 0001110  81.0138 279.0977 15.06405354232137",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 39,
+                    "loglevel": "info",
+                    "tle_1": "1 44752U 19074AR  24101.22129063 -.00000034  00000+0  16646-4 0  9990", 
+                    "tle_2": "2 44752  53.0544 102.1600 0001436  92.4644 267.6510 15.06403622243362",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 41,
+                    "loglevel": "info",
+                    "tle_1": "1 45559U 20025AE  24101.25001157  .00276052  00000+0  88545-2 0  9999", 
+                    "tle_2": "2 45559  53.0475 339.0677 0000985 107.2164 131.9763 15.30694147219543",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 43,
+                    "loglevel": "info",
+                    "tle_1": "1 46126U 20057K   24100.73729078  .00038169  00000+0  21908-2 0  9991", 
+                    "tle_2": "2 46126  53.0563 211.9988 0002331 308.5929  51.4854 15.12199276200750",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 45,
+                    "loglevel": "info",
+                    "tle_1": "1 44949U 20001AM  24101.05912338  .00001179  00000+0  98008-4 0  9998", 
+                    "tle_2": "2 44949  53.0526 222.8908 0000901  78.7852 281.3238 15.06391530234820",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 47,
+                    "loglevel": "info",
+                    "tle_1": "1 53427U 22097AR  24100.76279275  .00001680  00000+0  12363-3 0  9995", 
+                    "tle_2": "2 53427  53.2183  11.7229 0001482  95.8223 264.2938 15.08839093 93137",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 49,
+                    "loglevel": "info",
+                    "tle_1": "1 54785U 22175AD  24101.12939330  .00000304  00000+0  37175-4 0  9997", 
+                    "tle_2": "2 54785  53.2258 244.9509 0001534  82.6715 277.4452 15.08849921 73076",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 51,
+                    "loglevel": "info",
+                    "tle_1": "1 47811U 21018AA  24100.80803139  .00001656  00000+0  13006-3 0  9992", 
+                    "tle_2": "2 47811  53.0539 129.0179 0001341  81.4249 278.6891 15.06389882171598",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 53,
+                    "loglevel": "info",
+                    "tle_1": "1 59178U 24045A   24101.32597681  .00001279  00000+0  37888-4 0  9990", 
+                    "tle_2": "2 59178  42.9995 112.2015 0001632 242.9293 117.1397 15.40698446  5949",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 55,
+                    "loglevel": "info",
+                    "tle_1": "1 57917U 23147E   24101.53173759  .00000431  00000+0  46978-4 0  9999", 
+                    "tle_2": "2 57917  43.0026 159.9234 0001052 276.5993  83.4730 15.02536411 31601",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 57,
+                    "loglevel": "info",
+                    "tle_1": "1 58458U 23183X   24100.76215832 -.00002199  00000+0 -14773-3 0  9995", 
+                    "tle_2": "2 58458  43.0016 240.5567 0001842 278.7969  81.2665 15.02531598 21581",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 59,
+                    "loglevel": "info",
+                    "tle_1": "1 52680U 22053AA  24100.91667824 -.00006398  00000+0 -38411-3 0  9990", 
+                    "tle_2": "2 52680  53.2177  40.8007 0001309  84.4419 327.1710 15.08850819105259",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 61,
+                    "loglevel": "info",
+                    "tle_1": "1 47903U 21021AV  24100.86328771  .00006368  00000+0  44599-3 0  9994", 
+                    "tle_2": "2 47903  53.0530 158.7623 0001176  84.3663 275.7460 15.06402099171341",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 63,
+                    "loglevel": "info",
+                    "tle_1": "1 54828U 22177J   24100.92426692  .00002034  00000+0  16561-3 0  9993", 
+                    "tle_2": "2 54828  43.0052 330.1619 0001308 265.0554  95.0139 15.02541313 71847",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 65,
+                    "loglevel": "info",
+                    "tle_1": "1 47396U 21005AZ  24101.48164775  .00000991  00000+0  13026-4 0  9991", 
+                    "tle_2": "2 47396  53.0551 270.0159 0000543  56.8056 303.3013 15.69729075179063",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 67,
+                    "loglevel": "info",
+                    "tle_1": "1 57053U 23088F   24101.56965772  .00000118  00000+0  23842-4 0  9998", 
+                    "tle_2": "2 57053  43.0034 300.9278 0001139 276.2303  83.8410 15.02537838 44455",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 69,
+                    "loglevel": "info",
+                    "tle_1": "1 47727U 21017F   24100.18691606  .00003886  00000+0  27963-3 0  9996", 
+                    "tle_2": "2 47727  53.0562  21.8049 0001557  93.8628 266.2539 15.06400233173589",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 71,
+                    "loglevel": "info",
+                    "tle_1": "1 53669U 22105X   24101.23550307  .00000773  00000+0  64755-4 0  9999", 
+                    "tle_2": "2 53669  97.6562 343.0203 0000677 142.2999 217.8273 15.01263416 88721",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 73,
+                    "loglevel": "info",
+                    "tle_1": "1 58739U 24005M   24100.90095508  .00000197  00000+0  29634-4 0  9990", 
+                    "tle_2": "2 58739  43.0014  58.8072 0001040 259.0001 101.0724 15.02537926 15302",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 75,
+                    "loglevel": "info",
+                    "tle_1": "1 58085U 23160L   24100.84303703  .00003374  00000+0  26468-3 0  9998", 
+                    "tle_2": "2 58085  43.0036 277.5496 0002083 263.0003  97.0602 15.02539255 27797",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 77,
+                    "loglevel": "info",
+                    "tle_1": "1 57790U 23134V   24100.82649199  .00000242  00000+0  32949-4 0  9994", 
+                    "tle_2": "2 57790  43.0034  34.9447 0000310 245.0691 115.0119 15.02532718 34342",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 79,
+                    "loglevel": "info",
+                    "tle_1": "1 49446U 21104AQ  24101.17541497  .00002783  00000+0  19298-3 0  9992", 
+                    "tle_2": "2 49446  53.2189 104.8734 0001586 102.5742 257.5427 15.08820097134533",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 81,
+                    "loglevel": "info",
+                    "tle_1": "1 59250U 24049V   24101.52331629  .00001425  00000+0  41373-4 0  9992", 
+                    "tle_2": "2 59250  42.9996 163.3680 0001413 278.9305  81.1391 15.40693215  5185",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 83,
+                    "loglevel": "info",
+                    "tle_1": "1 45672U 20035R   24101.56135551  .00003681  00000+0  26607-3 0  9994", 
+                    "tle_2": "2 45672  53.0541 290.6361 0001569  86.2785 273.8384 15.06375711213511",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 85,
+                    "loglevel": "info",
+                    "tle_1": "1 53478U 22099P   24100.59057935  .00000796  00000+0  66516-4 0  9998", 
+                    "tle_2": "2 53478  97.6551 222.4342 0001040 100.0626 260.0716 15.01265034 91336",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 87,
+                    "loglevel": "info",
+                    "tle_1": "1 59323U 24057D   24101.58335648 -.00009367  00000+0 -61072-4 0  9996", 
+                    "tle_2": "2 59323  43.0006 220.7439 0001594 305.6717   8.8796 15.73847907  3655",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 89,
+                    "loglevel": "info",
+                    "tle_1": "1 48400U 21038AZ  24100.64675314  .00002453  00000+0  18361-3 0  9998", 
+                    "tle_2": "2 48400  53.0551 239.7381 0001636  87.0385 273.0791 15.06386077161940",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 91,
+                    "loglevel": "info",
+                    "tle_1": "1 46336U 20062M   24101.12270155  .00003314  00000+0  24127-3 0  9992", 
+                    "tle_2": "2 46336  53.0502 252.6052 0000854  85.3216 274.7870 15.06401131199481",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 93,
+                    "loglevel": "info",
+                    "tle_1": "1 47389U 21005AS  24101.55070682  .00000807  00000+0  73022-4 0  9992", 
+                    "tle_2": "2 47389  53.0542 295.6719 0000853  65.1047 295.0030 15.06400584178097",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 95,
+                    "loglevel": "info",
+                    "tle_1": "1 57296U 23096G   24101.26136530 -.00000301  00000+0 -71884-5 0  9991", 
+                    "tle_2": "2 57296  43.0026  58.3998 0001209 277.1954  82.8750 15.02546253 41452",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 97,
+                    "loglevel": "info",
+                    "tle_1": "1 52457U 22049G   24100.99325259 -.00000765  00000+0 -29974-4 0  9995", 
+                    "tle_2": "2 52457  53.2156 325.6831 0001457  86.9524 273.1635 15.08836514106797",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 99,
+                    "loglevel": "info",
+                    "tle_1": "1 58538U 23192H   24100.88111753  .00012039  00000+0  44651-3 0  9994", 
+                    "tle_2": "2 58538  53.1605  68.0069 0002207  97.0640 263.0611 15.28026550 19000",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 101,
+                    "loglevel": "info",
+                    "tle_1": "1 48679U 21044AT  24100.76378576  .00004899  00000+0  34740-3 0  9991", 
+                    "tle_2": "2 48679  53.0565   9.2176 0001326  82.7333 277.3806 15.06417000158509",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 103,
+                    "loglevel": "info",
+                    "tle_1": "1 55919U 23037F   24100.43067793  .00000205  00000+0  24981-4 0  9994", 
+                    "tle_2": "2 55919  70.0000 267.5853 0003004 271.8995  88.1820 14.98329381 58741",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 105,
+                    "loglevel": "info",
+                    "tle_1": "1 46725U 20073BH  24100.87760067  .00010739  00000+0  73842-3 0  9990", 
+                    "tle_2": "2 46725  53.0523 153.7049 0001449  97.7320 262.3833 15.06417191191596",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 107,
+                    "loglevel": "info",
+                    "tle_1": "1 53860U 22114AU  24101.47580106  .00001483  00000+0  11123-3 0  9997", 
+                    "tle_2": "2 53860  53.2153 178.6368 0001544  86.7210 273.3959 15.08844070 87167",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 109,
+                    "loglevel": "info",
+                    "tle_1": "1 55582U 23020P   24101.54328580  .00000628  00000+0  61581-4 0  9995", 
+                    "tle_2": "2 55582  43.0041 184.8988 0001508 272.6224  87.4446 15.02526828 64051",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 111,
+                    "loglevel": "info",
+                    "tle_1": "1 58473U 23186A   24101.44499512  .00015303  00000+0  11452-2 0  9999", 
+                    "tle_2": "2 58473  43.0005 261.8437 0001943 261.7960  98.2662 15.02543218 20769",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 113,
+                    "loglevel": "info",
+                    "tle_1": "1 52667U 22053M   24100.89159600  .00000627  00000+0  57477-4 0  9991", 
+                    "tle_2": "2 52667  53.2196  51.1494 0001566 101.0826 259.0342 15.08832454105555",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 115,
+                    "loglevel": "info",
+                    "tle_1": "1 56883U 23083H   24100.85006533  .00000207  00000+0  30384-4 0  9993", 
+                    "tle_2": "2 56883  43.0038 279.3464 0001332 278.5254  81.5437 15.02532416 46543",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 117,
+                    "loglevel": "info",
+                    "tle_1": "1 57827U 23138V   24101.58335648 -.00527783  00000+0 -40692-1 0  9991", 
+                    "tle_2": "2 57827  43.0028  69.1048 0000981 271.6617 170.6600 15.03372286 33692",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 119,
+                    "loglevel": "info",
+                    "tle_1": "1 54008U 22125AW  24101.15927150 -.00000326  00000+0 -24236-5 0  9991", 
+                    "tle_2": "2 54008  53.2178  99.5862 0001261 103.0986 257.0146 15.08838343 84203",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 121,
+                    "loglevel": "info",
+                    "tle_1": "1 57670U 23124H   24101.58335648  .00027410  00000+0  99842-3 0  9995", 
+                    "tle_2": "2 57670  53.0720 211.1566 0001400  86.8078 135.9784 15.28024044 36307",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 123,
+                    "loglevel": "info",
+                    "tle_1": "1 47900U 21021AS  24101.50251861 -.00000059  00000+0  43769-5 0  9990", 
+                    "tle_2": "2 47900  53.0531 147.5394 0001512  69.3391 290.7788 15.69713007170730",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 125,
+                    "loglevel": "info",
+                    "tle_1": "1 46383U 20062BL  24100.78174087  .00001826  00000+0  14142-3 0  9994", 
+                    "tle_2": "2 46383  53.0555 274.1363 0001365  94.1030 266.0115 15.06410435198960",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 127,
+                    "loglevel": "info",
+                    "tle_1": "1 52586U 22051BC  24101.16529055  .00000229  00000+0  32510-4 0  9994", 
+                    "tle_2": "2 52586  53.2192  14.9178 0001703 105.2677 254.8504 15.08843990106203",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 129,
+                    "loglevel": "info",
+                    "tle_1": "1 52454U 22049D   24101.33917116  .00003064  00000+0  21046-3 0  9994", 
+                    "tle_2": "2 52454  53.2168 324.1382 0001319  82.0101 278.1040 15.08846601106846",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 131,
+                    "loglevel": "info",
+                    "tle_1": "1 49457U 21104BB  24100.75960831  .00001760  00000+0  12863-3 0  9999", 
+                    "tle_2": "2 49457  53.2176 116.7496 0001407  84.5175 275.5978 15.08840595133264",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 133,
+                    "loglevel": "info",
+                    "tle_1": "1 48575U 21041Y   24101.41807753  .00004056  00000+0  29103-3 0  9992", 
+                    "tle_2": "2 48575  53.0562 346.5952 0001512  96.6342 263.4819 15.06403354160972",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 135,
+                    "loglevel": "info",
+                    "tle_1": "1 57409U 23102F   24101.31394705 -.00003956  00000+0 -27804-3 0  9991", 
+                    "tle_2": "2 57409  43.0039  83.5593 0001155 275.6178  84.4532 15.02520661 41185",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 137,
+                    "loglevel": "info",
+                    "tle_1": "1 52116U 22029AE  24101.04385492  .00000274  00000+0  35288-4 0  9995", 
+                    "tle_2": "2 52116  53.2189 335.4627 0001361  68.0818 292.0319 15.08841083115312",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 139,
+                    "loglevel": "info",
+                    "tle_1": "1 56835U 23079N   24100.92366876  .00000291  00000+0  36601-4 0  9993", 
+                    "tle_2": "2 56835  43.0043 304.1176 0001414 262.4038  97.6643 15.02533375 47774",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 141,
+                    "loglevel": "info",
+                    "tle_1": "1 48357U 21038E   24101.15956866  .00000092  00000+0  25485-4 0  9993", 
+                    "tle_2": "2 48357  53.0526 257.5008 0001227  88.6690 271.4439 15.05584236162330",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 143,
+                    "loglevel": "info",
+                    "tle_1": "1 56030U 23042AW  24101.08238500  .00000720  00000+0  68390-4 0  9997", 
+                    "tle_2": "2 56030  43.0041 238.9657 0001487 264.9062  95.1611 15.02533556 58312",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 145,
+                    "loglevel": "info",
+                    "tle_1": "1 52869U 22062AR  24100.87503595 -.00000064  00000+0  14099-4 0  9998", 
+                    "tle_2": "2 52869  53.2191 271.2200 0001405 100.1378 259.9773 15.08836622100562",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 147,
+                    "loglevel": "info",
+                    "tle_1": "1 57935U 23148A   24100.95063767  .00007846  00000+0  29556-3 0  9991", 
+                    "tle_2": "2 57935  53.1082  29.1738 0001054  73.6455 286.4660 15.28027029 31451",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 149,
+                    "loglevel": "info",
+                    "tle_1": "1 52990U 22076E   24101.10963696  .00001609  00000+0  11911-3 0  9991", 
+                    "tle_2": "2 52990  53.2191   0.1670 0001261 106.9735 253.1395 15.08848717 97714",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 151,
+                    "loglevel": "info",
+                    "tle_1": "1 55284U 23010R   24101.47061386  .00002409  00000+0  20967-3 0  9994", 
+                    "tle_2": "2 55284  70.0008   4.7451 0002704 271.5217  88.5632 14.98324086 67897",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 153,
+                    "loglevel": "info",
+                    "tle_1": "1 52607U 22052K   24101.51354938  .00000365  00000+0  41042-4 0  9995", 
+                    "tle_2": "2 52607  53.2185 178.3679 0001429  86.8810 273.2346 15.08836955105759",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 155,
+                    "loglevel": "info",
+                    "tle_1": "1 52465U 22049Q   24101.56181611  .00000286  00000+0  36068-4 0  9998", 
+                    "tle_2": "2 52465  53.2178 303.1392 0001357  85.7400 274.3747 15.08838716107156",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 157,
+                    "loglevel": "info",
+                    "tle_1": "1 58887U 24020M   24101.36116858  .00022484  00000+0  82055-3 0  9992", 
+                    "tle_2": "2 58887  53.1589 326.1141 0000782 129.0207 231.0862 15.28076190 12155",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 159,
+                    "loglevel": "info",
+                    "tle_1": "1 48023U 21024AY  24101.08998602  .00002161  00000+0  16389-3 0  9995", 
+                    "tle_2": "2 48023  53.0521 227.7483 0001527  75.0961 285.0197 15.06407249168804",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 161,
+                    "loglevel": "info",
+                    "tle_1": "1 46152U 20057AM  24101.04899641  .00013232  00000+0  90500-3 0  9998", 
+                    "tle_2": "2 46152  53.0547 212.9755 0001347  60.3985 299.7138 15.06420596201427",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 163,
+                    "loglevel": "info",
+                    "tle_1": "1 58353U 23177C   24101.58335648  .00023328  00000+0  89968-3 0  9994", 
+                    "tle_2": "2 58353  42.9995 184.0715 0001310 268.2978  46.0946 15.25878445 23066",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 165,
+                    "loglevel": "info",
+                    "tle_1": "1 52694U 22053AQ  24101.54755425 -.00000005  00000+0  17770-4 0  9994", 
+                    "tle_2": "2 52694  53.2200  38.2046 0001460  82.9423 277.1735 15.08839816105357",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 167,
+                    "loglevel": "info",
+                    "tle_1": "1 49727U 21115D   24100.59857195  .00000815  00000+0  69271-4 0  9997", 
+                    "tle_2": "2 49727  53.2172  57.4619 0001458  91.1280 268.9879 15.08842454130972",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 169,
+                    "loglevel": "info",
+                    "tle_1": "1 52635U 22052AP  24100.84697180  .00002638  00000+0  18374-3 0  9996", 
+                    "tle_2": "2 52635  53.2163 156.3476 0001394  90.6809 269.4343 15.08845469105630",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 171,
+                    "loglevel": "info",
+                    "tle_1": "1 45073U 20006AF  24101.45166914  .00011157  00000+0  76602-3 0  9999", 
+                    "tle_2": "2 45073  53.0539 161.1311 0001048  91.9890 268.1219 15.06432396231834",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 173,
+                    "loglevel": "info",
+                    "tle_1": "1 58409U 23180H   24100.42039173  .00001674  00000+0  97561-4 0  9995", 
+                    "tle_2": "2 58409  43.0001 247.4255 0001229 275.4178  84.6529 15.15956399 22497",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 175,
+                    "loglevel": "info",
+                    "tle_1": "1 58671U 23211E   24100.93644322  .00000359  00000+0  23591-4 0  9996", 
+                    "tle_2": "2 58671  43.0041  65.0659 0000918 292.7678  67.3076 15.25884978 15676",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 177,
+                    "loglevel": "info",
+                    "tle_1": "1 55571U 23020C   24100.59578976  .00003519  00000+0  27539-3 0  9999", 
+                    "tle_2": "2 55571  43.0031 203.6495 0001347 281.8539  78.2152 15.02544784 63752",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 179,
+                    "loglevel": "info",
+                    "tle_1": "1 59311U 24056R   24101.25001157 -.00020563  00000+0 -13825-3 0  9994", 
+                    "tle_2": "2 59311  43.0011 261.1109 0001947 252.7795 201.7131 15.73820761  3916",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 181,
+                    "loglevel": "info",
+                    "tle_1": "1 55333U 23013C   24100.79550256 -.00001574  00000+0 -10147-3 0  9998", 
+                    "tle_2": "2 55333  43.0021 138.2701 0001297 278.8907  81.1789 15.02529642 66577",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 183,
+                    "loglevel": "info",
+                    "tle_1": "1 52460U 22049K   24101.56456844  .00000995  00000+0  80612-4 0  9997", 
+                    "tle_2": "2 52460  53.2183 313.0770 0001103  93.5982 266.5137 15.08838913107018",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 185,
+                    "loglevel": "info",
+                    "tle_1": "1 53973U 22125K   24100.78945300  .00001258  00000+0  97118-4 0  9997", 
+                    "tle_2": "2 53973  53.2166 121.4835 0001463  91.3810 268.7350 15.08844320 83818",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 187,
+                    "loglevel": "info",
+                    "tle_1": "1 58607U 23200U   24100.72253261  .00001222  00000+0  10555-3 0  9993", 
+                    "tle_2": "2 58607  43.0044   8.0626 0001143 276.2691  83.8022 15.02532550 18456",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 189,
+                    "loglevel": "info",
+                    "tle_1": "1 56129U 23046AP  24101.56322573  .00000193  00000+0  29373-4 0  9999", 
+                    "tle_2": "2 56129  43.0031 287.6721 0001257 275.9540  84.1159 15.02537182 58337",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 191,
+                    "loglevel": "info",
+                    "tle_1": "1 47909U 21021BB  24100.88911828  .00009764  00000+0  67308-3 0  9999", 
+                    "tle_2": "2 47909  53.0536 168.6540 0001354  86.0374 274.0770 15.06422768170392",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 193,
+                    "loglevel": "info",
+                    "tle_1": "1 53858U 22114AS  24100.48957438  .00003102  00000+0  21285-3 0  9990", 
+                    "tle_2": "2 53858  53.2136 183.1455 0001722  93.4894 266.6295 15.08845244 87559",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 195,
+                    "loglevel": "info",
+                    "tle_1": "1 46125U 20057J   24101.31804593  .00003283  00000+0  23914-3 0  9990", 
+                    "tle_2": "2 46125  53.0532 211.7305 0001371  85.9338 274.1807 15.06411183201467",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 197,
+                    "loglevel": "info",
+                    "tle_1": "1 53561U 22101AL  24100.88147297 -.00000442  00000+0 -96642-5 0  9992", 
+                    "tle_2": "2 53561  53.2179 321.1918 0001436  91.1909 268.9248 15.08842282 90814",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "SAT",
+                    "iname": "SatelliteBasic",
+                    "nodeid": 199,
+                    "loglevel": "info",
+                    "tle_1": "1 54168U 22141M   24101.43532447  .00000358  00000+0  40582-4 0  9992", 
+                    "tle_2": "2 54168  53.2166 258.7987 0001303  82.7009 277.4131 15.08840248 80449",
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelOrbit"
+                        },
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        },
+                        {
+                            "iname": "simplemodel1"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10001,
+                    "loglevel": "info",
+                    "latitude": 25.033000,
+                    "longitude": 121.565400,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {                        
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10002,
+                    "loglevel": "info",
+                    "latitude": 25.043000,
+                    "longitude": 121.565400,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {                        
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    "type": "GS",
+                    "iname": "GSBasic",
+                    "nodeid": 10003,
+                    "loglevel": "info",
+                    "latitude": 25.053000,
+                    "longitude": 121.565400,
+                    "elevation": 0.0,
+                    "additionalargs": "",
+                    "models":[
+                        {
+                            "iname": "ModelFovTimeBased",
+                            "min_elevation": 25
+                        },
+                        {                        
+                            "iname": "ModelImagingRadio",
+                            "self_ctrl": true,
+                            "radio_physetup":{
+                                "_frequency": 8.09e9,
+                                "_bandwidth": 96e6,
+                                "_tx_power": 8.2,
+                                "_tx_antenna_gain": 15,
+                                "_tx_line_loss": 2,
+                                "_rx_antenna_gain": 49,
+                                "_rx_line_loss": 1.8,
+                                "_gain_to_temperature": 29,
+                                "_symbol_rate": 76.8e6,
+                                "_num_channels": 6
+                            }
+                        }
+                    ]
+                }
+                ]
+            }
+        ],
+        "simtime":
+        {
+            "starttime": "2024-04-09 12:00:00",
+            "endtime": "2024-04-09 14:00:00",
+            "delta": 1
+        },
+        "simlogsetup":
+        {
+            "loghandler": "LoggerFileChunkwise",
+            "logfolder": "imagingLogs",
+            "logchunksize": 1000000
+        }
+}
+    

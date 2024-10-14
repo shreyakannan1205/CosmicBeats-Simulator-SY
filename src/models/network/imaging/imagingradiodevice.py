@@ -47,7 +47,7 @@ class ImagingRadioDevice(RadioDevice):
         
         self.__logger = _loggerins
 
-        self.__radioPhySetup = _radioPhySetup.__dict__
+        self.__radioPhySetup = _radioPhySetup.__dict__ # was dict instead of dir (1002 me)
         
     def get_OwnerNode(self) -> INode:
         '''

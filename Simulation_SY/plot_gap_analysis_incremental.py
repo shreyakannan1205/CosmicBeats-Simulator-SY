@@ -70,8 +70,11 @@ def main():
     ground_stations = get_ground_stations()
 
     files_info = [
-        ('output_incremental_5_all', "All"),
-        ('output_incremental_5_incremental', "Incremental")
+        # ('output_incremental_5_all', "All"),
+        # ('output_incremental_5_incremental', "Incremental")
+
+        ('output_incremental_3_all', "All"),
+        ('output_incremental_3_incremental', "Incremental")
     ]
 
     results = []

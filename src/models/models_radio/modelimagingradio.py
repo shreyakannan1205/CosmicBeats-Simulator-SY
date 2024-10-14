@@ -19,6 +19,8 @@ from src.models.imodel import EModelTag
 from src.models.network.imaging.imagingchannel import ImagingChannel
 from src.models.network.imaging.imagingradiodevice import ImagingRadioDevice
 from src.models.models_radio.modelgenericradio import ModelGenericRadio
+from src.models.network.imaging.imaginglink import ImagingLink # I added this 1002
+
 
 class ModelImagingRadio(ModelGenericRadio):
     _modeltag = EModelTag.IMAGINGRADIO
@@ -61,14 +63,13 @@ class ModelImagingRadio(ModelGenericRadio):
             If your model does not have any dependency, just keep the list EMPTY. 
         '''
         return self.__dependencies
-    
-    def _update_Channel(self):
+
+    def _update_Channel(self, optionalArgumentWhichDoesNothing=None):
         """
         @desc
             This method updates the channels of the radio device.
             This should only be called when the node is transmitting
-        """
-
+        """        
         #Let's get all the possible devices that we can transmit to - let's find which devices are in the view
         _visibleNodeIDs = []
         #let's call the FoV model to get the view
@@ -88,7 +89,6 @@ class ModelImagingRadio(ModelGenericRadio):
                                                                                             _myLocation = None)
         
         self._logger.write_Log("Node {} has {} nodes in its view".format(self._ownernode.nodeID, len(_visibleNodeIDs)), ELogType.LOGINFO, self._ownernode.timestamp)
-        
         if len(_visibleNodeIDs) == 0:
             return
         
@@ -110,17 +110,26 @@ class ModelImagingRadio(ModelGenericRadio):
                     _models.append(_model)
 
         _devices = [_model.call_APIs("get_RadioDevice") for _model in _models]
-
         _channels = []
         for _device in _devices:
             _channel = ImagingChannel()
             _channel.add_Device(_device)
             _channel.add_Device(self._radioDevice)
             _channels.append(_channel)
-            
+            # print("channel", _channel) #added by me
+
         self._radioDevice.set_Channels(_channels)
+        return _channels
 
     ##REST IS SAME AS BEFORE
+    #"update_Channel": _update_Channel,
+    # _apiHandlerDictionary.update({
+    #     "update_Channel": _update_Channel
+    # })
+
+    def __init__(self, _ownernodeins: INode, _loggerins: ILogger, _radioID: int, _radioPhySetup, _queueSize: int = 0, _selfCtrl: bool = True) -> None:
+        super().__init__(_ownernodeins, _loggerins, _radioID, _radioPhySetup, _queueSize, _selfCtrl)
+        self._apiHandlerDictionary['update_Channel'] = ModelImagingRadio._update_Channel
 
 def init_ModelImagingRadio(
     _ownernodeins: INode, 

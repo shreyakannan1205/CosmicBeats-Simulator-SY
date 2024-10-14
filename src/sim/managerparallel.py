@@ -494,9 +494,10 @@ class ManagerParallel(IManager):
                 self.__resumingCondition.wait()
                 #Let's reset the stopping and resuming conditions
                 self.__resumingCondition.clear()
-                    
-            if self.__currentStep % 60 == 0:
-                print(f"[Running Sim]: Current step: {self.__currentStep}")
+            
+            # I commented this out 1002
+            # if self.__currentStep % 60 == 0:
+            #     print(f"[Running Sim]: Current step: {self.__currentStep}") 
             
             if self.__numOfThreads > 1:
                 with concurrent.futures.ThreadPoolExecutor(max_workers=self.__numOfThreads) as executor:

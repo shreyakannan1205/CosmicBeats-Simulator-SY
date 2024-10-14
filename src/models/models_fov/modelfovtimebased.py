@@ -159,6 +159,9 @@ class ModelFovTimeBased(IModel):
             The end time of the pass
         """
         _otherNodeType = str(_otherNode.nodeType.value)
+        
+        # _startTimeUnix = _startTime
+        # _endTimeUnix = _endTime
         _startTimeUnix = _startTime.to_unix()
         _endTimeUnix = _endTime.to_unix()
         # Mutex lock 

@@ -62,6 +62,7 @@ from src.models.models_tumbling.modeladacs import init_ModelADACS
 
 from src.models.models_imaging.modelimaginglogicbased import init_ModelImagingLogicBased
 from src.models.models_orbital.simplemodel import init_simplemodel
+from src.models.models_orbital.simplemodel1 import init_simplemodel1
 
 modelInitDictionary = {
     "ModelOrbit" : init_ModelOrbit,
@@ -96,5 +97,6 @@ modelInitDictionary = {
     "ModelADACS": init_ModelADACS,
     
     "ModelImagingLogicBased": init_ModelImagingLogicBased,
-    "simplemodel": init_simplemodel
+    "simplemodel": init_simplemodel,
+    "simplemodel1": init_simplemodel1
     }

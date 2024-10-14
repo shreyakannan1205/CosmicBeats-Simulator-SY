@@ -463,10 +463,10 @@ class ModelGenericRadio(IModel, ABC):
             The API return
         '''
         _ret = None
-        try:
-            _ret = self._apiHandlerDictionary[_apiName](self, **_kwargs)
-        except Exception as e:
-            print(f"[ModelGenericRadio]: An unhandled API request has been received by {self._ownernode.nodeID}: ", e)
+        #try:
+        _ret = self._apiHandlerDictionary[_apiName](self, **_kwargs)
+        #except Exception as e:
+        #    print(f"[ModelGenericRadio]: An unhandled API request has been received by {self._ownernode.nodeID}: ", e)
         return _ret    
 
     def __init__(

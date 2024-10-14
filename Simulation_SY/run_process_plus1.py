@@ -29,7 +29,7 @@ def process_source_file(directory, number, repetitions):
         print(f"Cycle {i + 1} for number {number} completed.")
 
 def main():
-    directory = "PlusOne"
+    directory = "PlusOne_1002"
     os.makedirs(directory, exist_ok=True)
 
     try:

@@ -39,7 +39,8 @@ repetitions = int(input("Enter the number of repetitions: "))
 folder_name = "NumSat_Debug"
 os.makedirs(folder_name, exist_ok=True)
 
-numbers = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 3000]
+# numbers = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 3000]
+numbers = [100]
 
 for num in numbers:
     target_gap_duration_file = os.path.join(folder_name, f"total_gap_duration_analysis_{num}.txt")

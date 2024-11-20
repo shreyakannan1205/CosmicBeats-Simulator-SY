@@ -5,11 +5,12 @@ from datetime import timedelta
 
 #repetitions = int(input("Enter the number of repetitions: "))
 
-repetitions = 40
+repetitions = 1
 folder_name = os.getcwd()
 num_sat = 1000
 
-distance = [10,20,50]
+#distance = [10,20,50]
+distance = [50]
 
 for d in distance:
     for i in range(0, repetitions):
@@ -33,6 +34,6 @@ for d in distance:
         
         except Exception as e:
             print("error with command e")
-        
+    
     break
 

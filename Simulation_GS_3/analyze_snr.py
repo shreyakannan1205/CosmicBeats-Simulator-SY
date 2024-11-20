@@ -3,7 +3,7 @@ import os
 
 # Load the data from the text file
 
-d = 10
+d = 50
 numsat = 1000
 
 file_path = os.getcwd() +"/" + os.path.join("outputs",f'output_{numsat}_{d}.txt')
@@ -80,7 +80,7 @@ def analyze_random_snr(df):
         gs_10003 = group[group['ground_station'] == 10003]
 
         if not gs_10001.empty and not gs_10002.empty and not gs_10003.empty:
-            # Find the satellite with the largest SNR for both ground stations
+            
 
             sat_10001 = gs_10001.sample(n=1)["satellite"].iloc[0]
             sat_10002 = gs_10002.sample(n=1)["satellite"].iloc[0]
@@ -93,7 +93,7 @@ def analyze_random_snr(df):
         else:
 
             unique_satellite = group['satellite'].iloc[0]
-            results.append((timestamp, "One satellite case/True", unique_satellite))
+            results.append((timestamp, "True", unique_satellite)) #check this
     
     return pd.DataFrame(results, columns=['timestamp', 'same_satellite', 'satellite'])
 
